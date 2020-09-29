@@ -13,11 +13,11 @@
 - part: Coding in GIS II
   chapters:
   - file: 02_01_Coding_in_GIS_2
-  - file: 02_02_Conda_Cheetsheet
+  - file: 02_02_Conda_Cheatsheet
   - file: 02_03_Python_Module
   - file: 02_04_Functions_I
   - file: 02_05_Functions_II
-  - file: 02_06_Zufallspunkte
+  - file: 02_06_Zufallzahlen
   - file: 02_07_Funktionen_in_DataFrames
 
 - part: Coding in GIS III
