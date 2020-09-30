@@ -26,11 +26,24 @@ def musterloesung(notebooks,tag = "remove-cell"):
 
         nbf.write(ntbk, ipath)
 
+# Sort all the notebooks in order (so they can easily be selected / unselected)
 notebooks_cog1.sort()
+notebooks_cog2.sort()
+notebooks_cog3.sort()
+
+# first, remove all cells that contain musterlösung
 musterloesung(notebooks_cog1, "remove-cell")
-musterloesung(notebooks_cog1, "hide-cell")
 musterloesung(notebooks_cog2, "remove-cell")
 musterloesung(notebooks_cog3, "remove-cell")
+
+# selectivley add notebooks
+musterloesung(notebooks_cog1, "hide-cell")
+
+
+# include "function basics" (uncomment and add 5, 6, 7 to add subsequent chapters)
+musterloesung(notebooks_cog2[0:5], "hide-cell")
+
+
 
 
 
