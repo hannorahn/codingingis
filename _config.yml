@@ -20,3 +20,6 @@ sphinx:
   config:
     language                : de
   
+execute:
+  exclude_patterns:
+    - "99_*"
