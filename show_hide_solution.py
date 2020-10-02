@@ -41,7 +41,7 @@ musterloesung(notebooks_cog1, "hide-cell")
 
 
 # include "function basics" (uncomment and add 5, 6, 7 to add subsequent chapters)
-musterloesung(notebooks_cog2[0:5], "hide-cell")
+musterloesung(notebooks_cog2, "hide-cell")
 
 
 
