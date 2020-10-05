@@ -69,7 +69,7 @@ jobs:
         git config --local user.name "GitHub Action"
         git add codingingis.pdf
         git commit -m "update PDF version of the book"
-	git lfs --version
+        git lfs --version
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
