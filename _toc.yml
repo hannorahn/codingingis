@@ -28,9 +28,15 @@
   - file: 03_04_For_Loops
   - file: 03_04_Zeckenstich_Simulation
   - file: 03_05_GIS_in_Python
-  - file: 03_06_Waldanteil_Berechnen
+  - file: 03_06_Spatial_Joins
   
-  
+- part: Leistungsnachweis
+  chapters:
+  - file: 04_01_Leistungsnachweis
+  - file: 04_02_Vereinigen
+  - file: 04_03_Zusatzauftraege
+
+
 - part: Anhang
   chapters:
-  - file: 04_01_Jupyter_Shortcuts
+  - file: 05_01_Jupyter_Shortcuts
