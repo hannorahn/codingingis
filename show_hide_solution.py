@@ -5,6 +5,7 @@ import re
 notebooks_cog1 = glob("./01_*.ipynb", recursive=False) # recursive = True to search in subfolders
 notebooks_cog2 = glob("./02_*.ipynb", recursive=False) # recursive = True to search in subfolders
 notebooks_cog3 = glob("./03_*.ipynb", recursive=False) # recursive = True to search in subfolders
+notebooks_cog4 = glob("./04_*.ipynb", recursive=False) # recursive = True to search in subfolders
 
 # Search through each notebook and look for the text, add a tag if necessary
 
@@ -35,12 +36,10 @@ notebooks_cog3.sort()
 musterloesung(notebooks_cog1, "remove-cell")
 musterloesung(notebooks_cog2, "remove-cell")
 musterloesung(notebooks_cog3, "remove-cell")
+musterloesung(notebooks_cog4, "remove-cell")
 
 # selectivley add notebooks
 musterloesung(notebooks_cog1, "hide-cell")
-
-
-# include "function basics" (uncomment and add 5, 6, 7 to add subsequent chapters)
 musterloesung(notebooks_cog2, "hide-cell")
 
 
