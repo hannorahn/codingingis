@@ -36,6 +36,7 @@ jobs:
     - name: install latex dependencies
       run: |
         sudo apt-get install texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra latexmk
+        sudo apt install texlive-lang-german
 
     # Build the html version of the book
     - name: Build the html-book
@@ -68,6 +69,7 @@ jobs:
         git config --local user.name "GitHub Action"
         git add codingingis.pdf
         git commit -m "update PDF version of the book"
+        git lfs --version
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
