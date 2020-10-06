@@ -1,21 +1,41 @@
 
-
 <!DOCTYPE html>
 
-<html>
+<html lang="de">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dictionaries &#8212; Coding in GIS</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link href="_static/css/index.css" rel="stylesheet">
-    <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
+    <title>Aufgabe 3: Dictionaries &#8212; Coding in GIS</title>
+    
+  <link rel="stylesheet" href="_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/sphinx-book-theme.bfb7730f9caf2ec0b46a44615585038c.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-dropdown.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.30270b6e4c972e43c488.js">
+
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
@@ -24,8 +44,9 @@
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script src="_static/sphinx-book-theme.js"></script>
+    <script src="_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -36,13 +57,13 @@
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="shortcut icon" href="_static/favicon.png"/>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Tabellarische Daten" href="01_06_Tabellarische_Daten.html" />
-    <link rel="prev" title="Listen" href="01_04_Listen.html" />
+    <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
+    <link rel="search" title="Suche" href="search.html" />
+    <link rel="next" title="Aufgabe 4: Tabellarische Daten" href="01_06_Tabellarische_Daten.html" />
+    <link rel="prev" title="Aufgabe 2: Listen" href="01_04_Listen.html" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="docsearch:language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
 
 
 
@@ -68,14 +89,14 @@
 
 <form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Dieses Buch durchsuchen ..." aria-label="Dieses Buch durchsuchen ..." autocomplete="off" >
 </form>
 
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="index.html">
-   Willkommen bei Coding in GIS !
+   Willkommen bei Coding in GIS
   </a>
  </li>
 </ul>
@@ -86,33 +107,33 @@
 </p>
 <ul class="current nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="01_01_Einleitung.html">
+  <a class="reference internal" href="01_01_Coding_in_GIS_1.html">
    Einleitung zu diesem Block
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="01_02_Primitive_Datentypen.html">
-   Primitive Datentypen
+   Aufgabe 1: Primitive Datentypen
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="01_03_Zusammengesetzte_Datentypen.html">
-   Zusammengesetzte Datentypen
+   Komplexe Datentypen
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="01_04_Listen.html">
-   Listen
+   Aufgabe 2: Listen
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Dictionaries
+   Aufgabe 3: Dictionaries
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="01_06_Tabellarische_Daten.html">
-   Tabellarische Daten
+   Aufgabe 4: Tabellarische Daten
   </a>
  </li>
 </ul>
@@ -123,22 +144,23 @@
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="02_01_Einleitung.html">
+  <a class="reference internal" href="02_01_Coding_in_GIS_2.html">
    Einleitung zu diesem Block
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="02_01a_Virtual_Environments.html">
-   Virtual Environments mit Conda
+  <a class="reference internal" href="02_02_Conda_Cheatsheet.html">
+   Conda cheat sheet
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="02_01b_Python_Module.html">
+  <a class="reference internal" href="02_03_Python_Module.html">
    Python Modules
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="02_02_Functions_I.html">
+  <a class="reference internal" href="02_04_Functions_I.html">
+   Aufgabe 5:
    <em>
     Function
    </em>
@@ -146,7 +168,8 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="02_03_Functions_II.html">
+  <a class="reference internal" href="02_05_Functions_II.html">
+   Aufgabe 6:
    <em>
     Function
    </em>
@@ -154,17 +177,16 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="02_04_Einzelpunkt_Verschieben.html">
-   Einen Einzelpunkt zufällig verschieben
+  <a class="reference internal" href="02_06_Zufallzahlen.html">
+   Aufgabe 7: Zufallszahlen generieren
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="02_05_Punkte_einer_DataFrame_verschieben.html">
-   Übung Punkte einer
+  <a class="reference internal" href="02_07_Funktionen_in_DataFrames.html">
+   Aufgabe 8: Funktionen in
    <em>
-    DataFrame
+    DataFrames
    </em>
-   zufällig verschieben
   </a>
  </li>
 </ul>
@@ -175,33 +197,84 @@
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="03_01_Einleitung.html">
+  <a class="reference internal" href="03_01_Coding_in_GIS_3.html">
    Einleitung zu diesem Block
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="03_02_For_Loops.html">
-   Übung: For Loops (Teil I)
+   Aufgabe 9:
+   <em>
+    For Loop
+   </em>
+   Einführung
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="03_03_For_Loops.html">
-   Übung: For Loops (Teil II)
+   Aufgabe 10:
+   <em>
+    For Loop
+   </em>
+   Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03_04_For_Loops.html">
+   Aufgabe 11:
+   <em>
+    For Loops
+   </em>
+   Advanced
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="03_04_Zeckenstich_Simulation.html">
-   Übung: Zeckenstich Simulation mit Loop
+   Aufgabe 12: Zeckenstich Simulation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="03_05_GIS_in_Python.html">
-   Übung: GIS in Python
+   Aufgabe 13: GIS in Python
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="03_06_Waldanteil_Berechnen.html">
-   Übung: Waldanteil berechnen
+  <a class="reference internal" href="03_06_Spatial_Joins.html">
+   Aufgabe 14: Spatial Joins
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Leistungsnachweis
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_01_Leistungsnachweis.html">
+   Einleitung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_02_Vereinigen.html">
+   Aufgabe 15: Vereinigen aller Einzelteile
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_03_Zusatzauftraege.html">
+   Abgabe Leistungsnachweis
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Anhang
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="05_01_Jupyter_Shortcuts.html">
+   Basic shortcuts for Jupyter lab
   </a>
  </li>
 </ul>
@@ -230,15 +303,15 @@
         
         <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
             data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            aria-expanded="true" aria-label="Navigation umschalten" aria-controls="site-navigation"
+            title="Navigation umschalten" data-toggle="tooltip" data-placement="left">
             <i class="fas fa-bars"></i>
             <i class="fas fa-arrow-left"></i>
             <i class="fas fa-arrow-up"></i>
         </button>
         
         <div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Laden Sie diese Seite herunter"><i
             class="fas fa-download"></i></button>
 
     
@@ -247,10 +320,10 @@
         
         <!-- Download raw file -->
         <a class="dropdown-buttons" href="_sources/01_05_Dictionary.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="Quelldatei herunterladen" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="In PDF drucken"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
     
@@ -260,7 +333,7 @@
 
         <!-- Full screen (wrap in <a> to have style consistency -->
         <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                data-placement="bottom" onclick="toggleFullScreen()" title="Vollbildmodus"><i
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
@@ -272,7 +345,7 @@
         
         
         <a class="jupyterhub-button" href="https://jupyterhub01.zhaw.ch/hub/user-redirect/git-pull?repo=https://github.com/ratnanil/codingingis&urlpath=lab/tree/codingingis/01_05_Dictionary.ipynb&branch=master"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="Starten JupyterHub" data-toggle="tooltip"
                 data-placement="left"><img class="jupyterhub-button-logo"
                     src="_static/images/logo_jupyterhub.svg"
                     alt="Interact on JupyterHub">JupyterHub</button></a>
@@ -286,58 +359,68 @@
 
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
+        
         <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
+            <i class="fas fa-list"></i> Inhalt
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ubung-1-dictionary-erstellen">
-   Übung 1: Dictionary erstellen
+  <a class="reference internal nav-link" href="#theorie">
+   Theorie
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ubung-2-elemente-aus-dictionary-ansprechen">
-   Übung 2: Elemente aus Dictionary ansprechen
+  <a class="reference internal nav-link" href="#ubungen">
+   Übungen
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ubung-3-dictionary-nutzen">
-   Übung 3:
-   <em>
-    Dictionary
-   </em>
-   nutzen
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ubung-4-key-erganzen">
-   Übung 4: Key ergänzen
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ubung-5-dictionary-mit-list">
-   Übung 5: Dictionary mit List
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ubung-6-eintrage-abrufen">
-   Übung 6: Einträge abrufen
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ubung-7-eintrage-abrufen">
-   Übung 7: Einträge abrufen
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ubung-8-mittelwert-berechnen">
-   Übung 8: Mittelwert berechnen
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-3-1">
+     Übung 3.1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-3-2">
+     Übung 3.2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-3-3">
+     Übung 3.3
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-3-4">
+     Übung 3.4
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-3-5">
+     Übung 3.5
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-3-6">
+     Übung 3.6
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-3-7">
+     Übung 3.7
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-3-8">
+     Übung 3.8
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
         </nav>
+        
     </div>
 </div>
     <div id="main-content" class="row">
@@ -345,11 +428,13 @@
         
               <div>
                 
-  <div class="section" id="dictionaries">
-<h1>Dictionaries<a class="headerlink" href="#dictionaries" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="aufgabe-3-dictionaries">
+<h1>Aufgabe 3: Dictionaries<a class="headerlink" href="#aufgabe-3-dictionaries" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="section" id="theorie">
+<h2>Theorie<a class="headerlink" href="#theorie" title="Link zu dieser Überschrift">¶</a></h2>
 <p>In den letzten Übungen haben wir einen Fokus auf Listen gelegt. Nun wollen wir ein besonderen Fokus auf den Datentyp <em>Dictionary</em> legen.</p>
-<p>Ähnlich wie eine List, ist eine Dictionary ein Behälter wo mehrere Elemente abgespeichert werden können. Wie bei einem Wörterbuch bekommt jedes Element ein “Schlüsselwort”, mit dem man den Eintrag finden kann.
-Unter dem Eintrag “trump” findet man im Langenscheidt Wörterbuch (1977) die Erklärung “erdichten, schwindeln, sich aus den Fingern saugen”.</p>
+<p>Ähnlich wie eine List, ist eine Dictionary ein Behälter wo mehrere Elemente abgespeichert werden können. Wie bei einem Wörterbuch bekommt jedes Element ein „Schlüsselwort“, mit dem man den Eintrag finden kann.
+Unter dem Eintrag „trump“ findet man im Langenscheidt Wörterbuch (1977) die Erklärung „erdichten, schwindeln, sich aus den Fingern saugen“.</p>
 <p><img alt="" src="_images/trump.jpg" /></p>
 <p>In Python würde man diese <em>Dictionary</em> folgendermassen erstellen:</p>
 <div class="cell docutils container">
@@ -359,7 +444,7 @@ Unter dem Eintrag “trump” findet man im Langenscheidt Wörterbuch (1977) die
 </div>
 </div>
 </div>
-<p>Schlüssel (von nun an mit <em>Key</em> bezeichnet) des Eintrages lautet “trump” und der dazugehörige Wert (<em>Value</em>) “erdichten- schwindeln- aus den Fingern saugen”. Beachte die geschweiften Klammern (<code class="docutils literal notranslate"><span class="pre">{</span></code> und <code class="docutils literal notranslate"><span class="pre">}</span></code>) bei der Erstellung einer Dictionary.</p>
+<p>Schlüssel (von nun an mit <em>Key</em> bezeichnet) des Eintrages lautet „trump“ und der dazugehörige Wert (<em>Value</em>) „erdichten- schwindeln- aus den Fingern saugen“. Beachte die geschweiften Klammern (<code class="docutils literal notranslate"><span class="pre">{</span></code> und <code class="docutils literal notranslate"><span class="pre">}</span></code>) bei der Erstellung einer Dictionary.</p>
 <p>Eine <em>Dictionary</em> besteht aber meistens nicht aus einem, sondern aus mehreren Einträgen: Diese werden Kommagetrennt aufgeführt.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -368,7 +453,7 @@ Unter dem Eintrag “trump” findet man im Langenscheidt Wörterbuch (1977) die
 </div>
 </div>
 </div>
-<p>Der Clou der <em>Dictionary</em> ist, dass man nun einen Eintrag mittels dem <em>Key</em> aufrufen kann. Wenn wir also nun wissen wollen was “trump” heisst, ermitteln wir dies mit der nachstehenden Codezeile:</p>
+<p>Der Clou der <em>Dictionary</em> ist, dass man nun einen Eintrag mittels dem <em>Key</em> aufrufen kann. Wenn wir also nun wissen wollen was „trump“ heisst, ermitteln wir dies mit der nachstehenden Codezeile:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">langenscheidt</span><span class="p">[</span><span class="s2">&quot;trump&quot;</span><span class="p">]</span>
@@ -381,7 +466,7 @@ Unter dem Eintrag “trump” findet man im Langenscheidt Wörterbuch (1977) die
 </div>
 </div>
 </div>
-<p>Um einer <em>Dictionary</em> mit einem weiteren Eintrag zu ergänzen, geht man sehr ähnlich vor wie beim Abrufen von Einträgen.</p>
+<p>Um eine <em>Dictionary</em> mit einem weiteren Eintrag zu ergänzen, geht man sehr ähnlich vor wie beim Abrufen von Einträgen.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">langenscheidt</span><span class="p">[</span><span class="s2">&quot;trumpet&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;trompete&quot;</span> 
@@ -389,7 +474,7 @@ Unter dem Eintrag “trump” findet man im Langenscheidt Wörterbuch (1977) die
 </div>
 </div>
 </div>
-<p>Ein <em>Key</em> kann auch mehrere Einträge enthalten. An unserem Langenscheidts Beispiel: Das Wort “trump” ist zwar eindeutig, doch “trumpery” hat vier verschiedene Bedeutungen. In so einem Fall können wir einem Eintrag auch eine <em>List</em> von Werten zuweisen. Beachte die Eckigen Klammern und die Kommas, welche die Listeneinträge voneinander trennt.</p>
+<p>Ein <em>Key</em> kann auch mehrere Einträge enthalten. An unserem Langenscheidts Beispiel: Das Wort „trump“ ist zwar eindeutig, doch „trumpery“ hat vier verschiedene Bedeutungen. In so einem Fall können wir einem Eintrag auch eine <em>List</em> von Werten zuweisen. Beachte die Eckigen Klammern und die Kommas, welche die Listeneinträge voneinander trennt.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">langenscheidt</span><span class="p">[</span><span class="s2">&quot;trumpery&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Plunder- Ramsch- Schund&quot;</span><span class="p">,</span> 
@@ -421,44 +506,141 @@ Unter dem Eintrag “trump” findet man im Langenscheidt Wörterbuch (1977) die
 </div>
 </div>
 </div>
-<div class="section" id="ubung-1-dictionary-erstellen">
-<h2>Übung 1: Dictionary erstellen<a class="headerlink" href="#ubung-1-dictionary-erstellen" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="ubungen">
+<h2>Übungen<a class="headerlink" href="#ubungen" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="ubung-3-1">
+<h3>Übung 3.1<a class="headerlink" href="#ubung-3-1" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Erstelle eine <em>Dictionary</em> mit folgenden Einträgen: Vorname und Nachname von (d)einer Person. Weise diese Dictionary der Variable <code class="docutils literal notranslate"><span class="pre">me</span></code> zu.</p>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
+
+<span class="n">me</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;vorname&quot;</span><span class="p">:</span> <span class="s2">&quot;Guido&quot;</span><span class="p">,</span> <span class="s2">&quot;nachname&quot;</span><span class="p">:</span> <span class="s2">&quot;van Rossum&quot;</span><span class="p">}</span>
+</pre></div>
 </div>
-<div class="section" id="ubung-2-elemente-aus-dictionary-ansprechen">
-<h2>Übung 2: Elemente aus Dictionary ansprechen<a class="headerlink" href="#ubung-2-elemente-aus-dictionary-ansprechen" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+</div>
+<div class="section" id="ubung-3-2">
+<h3>Übung 3.2<a class="headerlink" href="#ubung-3-2" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Rufe verschiedene Elemente aus der Dictionary via dem <em>Key</em> ab.</p>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
+
+<span class="n">me</span><span class="p">[</span><span class="s2">&quot;nachname&quot;</span><span class="p">]</span>
+</pre></div>
 </div>
-<div class="section" id="ubung-3-dictionary-nutzen">
-<h2>Übung 3: <em>Dictionary</em> nutzen<a class="headerlink" href="#ubung-3-dictionary-nutzen" title="Permalink to this headline">¶</a></h2>
-<p>Nutze <code class="docutils literal notranslate"><span class="pre">me</span></code> um nachstehenden Satz (mit deinen <em>Values</em>) zu erstellen:</p>
-<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;van Rossum&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ubung-3-3">
+<h3>Übung 3.3<a class="headerlink" href="#ubung-3-3" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Nutze <code class="docutils literal notranslate"><span class="pre">me</span></code> um nachstehenden Satz (mit <strong>deinen</strong> <em>Values</em>) zu erstellen:</p>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
+
+<span class="s2">&quot;Mein name ist &quot;</span><span class="o">+</span><span class="n">me</span><span class="p">[</span><span class="s2">&quot;nachname&quot;</span><span class="p">]</span> <span class="o">+</span><span class="s2">&quot;, &quot;</span><span class="o">+</span> <span class="n">me</span><span class="p">[</span><span class="s2">&quot;vorname&quot;</span><span class="p">]</span><span class="o">+</span><span class="s2">&quot; &quot;</span><span class="o">+</span><span class="n">me</span><span class="p">[</span><span class="s2">&quot;nachname&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Mein name ist van Rossum, Guido van Rossum&#39;
 </pre></div>
 </div>
 </div>
 </div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Mein name ist van Rossum, Guido van Rossum&#39;</span>
+</pre></div>
 </div>
-<div class="section" id="ubung-4-key-erganzen">
-<h2>Übung 4: Key ergänzen<a class="headerlink" href="#ubung-4-key-erganzen" title="Permalink to this headline">¶</a></h2>
-<p>Ergänze die Dictionary <code class="docutils literal notranslate"><span class="pre">me</span></code> durch einen Eintrag “groesse” mit (d)einer Grösse.</p>
 </div>
-<div class="section" id="ubung-5-dictionary-mit-list">
-<h2>Übung 5: Dictionary mit List<a class="headerlink" href="#ubung-5-dictionary-mit-list" title="Permalink to this headline">¶</a></h2>
-<p>Erstelle eine neue Dictionary <code class="docutils literal notranslate"><span class="pre">people</span></code> mit den <em>Keys</em> <code class="docutils literal notranslate"><span class="pre">vornamen</span></code>, <code class="docutils literal notranslate"><span class="pre">nachnamen</span></code> und <code class="docutils literal notranslate"><span class="pre">groesse</span></code> und jeweils 3 Einträge pro <em>Key</em>.</p>
+<div class="section" id="ubung-3-4">
+<h3>Übung 3.4<a class="headerlink" href="#ubung-3-4" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Ergänze die Dictionary <code class="docutils literal notranslate"><span class="pre">me</span></code> durch einen Eintrag „groesse“ mit (d)einer Grösse.</p>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
+
+<span class="n">me</span><span class="p">[</span><span class="s2">&quot;groesse&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">181</span>
+</pre></div>
 </div>
-<div class="section" id="ubung-6-eintrage-abrufen">
-<h2>Übung 6: Einträge abrufen<a class="headerlink" href="#ubung-6-eintrage-abrufen" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+</div>
+<div class="section" id="ubung-3-5">
+<h3>Übung 3.5<a class="headerlink" href="#ubung-3-5" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Erstelle eine neue Dictionary <code class="docutils literal notranslate"><span class="pre">people</span></code> mit den <em>Keys</em> „vornamen“, „nachnamen“ und „groesse“ und jeweils 3 Einträgen pro <em>Key</em>.</p>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
+
+<span class="n">people</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;vornamen&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Christopher&quot;</span><span class="p">,</span> <span class="s2">&quot;Henning&quot;</span><span class="p">,</span> <span class="s2">&quot;Severin&quot;</span><span class="p">],</span> <span class="s2">&quot;nachnamen&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Annen&quot;</span><span class="p">,</span><span class="s2">&quot;May&quot;</span><span class="p">,</span> <span class="s2">&quot;Kantereit&quot;</span><span class="p">],</span> <span class="s2">&quot;groessen&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">174</span><span class="p">,</span> <span class="mi">182</span><span class="p">,</span> <span class="mi">162</span><span class="p">]}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ubung-3-6">
+<h3>Übung 3.6<a class="headerlink" href="#ubung-3-6" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Rufe den <strong>ersten</strong> Vornamen deiner <em>Dict</em> auf. Dazu musst du dein Wissen über Listen und Dictionaries kombinieren.</p>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
+
+<span class="n">people</span><span class="p">[</span><span class="s2">&quot;vornamen&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
 </div>
-<div class="section" id="ubung-7-eintrage-abrufen">
-<h2>Übung 7: Einträge abrufen<a class="headerlink" href="#ubung-7-eintrage-abrufen" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Christopher&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ubung-3-7">
+<h3>Übung 3.7<a class="headerlink" href="#ubung-3-7" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Rufe den <strong>dritten</strong> Nachname deiner <em>Dict</em> auf.</p>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
+
+<span class="n">people</span><span class="p">[</span><span class="s2">&quot;nachnamen&quot;</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
 </div>
-<div class="section" id="ubung-8-mittelwert-berechnen">
-<h2>Übung 8: Mittelwert berechnen<a class="headerlink" href="#ubung-8-mittelwert-berechnen" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Kantereit&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ubung-3-8">
+<h3>Übung 3.8<a class="headerlink" href="#ubung-3-8" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Berechne den Mittelwert aller grössen in deiner Dict</p>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
+
+<span class="nb">sum</span><span class="p">(</span><span class="n">people</span><span class="p">[</span><span class="s2">&quot;groessen&quot;</span><span class="p">])</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">people</span><span class="p">[</span><span class="s2">&quot;groessen&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>172.66666666666666
+</pre></div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 
@@ -490,8 +672,8 @@ Unter dem Eintrag “trump” findet man im Langenscheidt Wörterbuch (1977) die
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="01_04_Listen.html" title="previous page">Listen</a>
-    <a class='right-next' id="next-link" href="01_06_Tabellarische_Daten.html" title="next page">Tabellarische Daten</a>
+    <a class='left-prev' id="prev-link" href="01_04_Listen.html" title="previous page">Aufgabe 2: Listen</a>
+    <a class='right-next' id="next-link" href="01_06_Tabellarische_Daten.html" title="next page">Aufgabe 4: Tabellarische Daten</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
@@ -510,7 +692,10 @@ Unter dem Eintrag “trump” findet man im Langenscheidt Wörterbuch (1977) die
       </div>
     </div>
 
-    <script src="_static/js/index.js"></script>
+    
+  <script src="_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
     
   </body>
 </html>

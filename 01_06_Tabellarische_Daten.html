@@ -1,21 +1,41 @@
 
-
 <!DOCTYPE html>
 
-<html>
+<html lang="de">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tabellarische Daten &#8212; Coding in GIS</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link href="_static/css/index.css" rel="stylesheet">
-    <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
+    <title>Aufgabe 4: Tabellarische Daten &#8212; Coding in GIS</title>
+    
+  <link rel="stylesheet" href="_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/sphinx-book-theme.bfb7730f9caf2ec0b46a44615585038c.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-dropdown.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.30270b6e4c972e43c488.js">
+
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
@@ -24,8 +44,9 @@
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script src="_static/sphinx-book-theme.js"></script>
+    <script src="_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
@@ -36,13 +57,13 @@
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="shortcut icon" href="_static/favicon.png"/>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Einleitung zu diesem Block" href="02_01_Einleitung.html" />
-    <link rel="prev" title="Dictionaries" href="01_05_Dictionary.html" />
+    <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
+    <link rel="search" title="Suche" href="search.html" />
+    <link rel="next" title="Einleitung zu diesem Block" href="02_01_Coding_in_GIS_2.html" />
+    <link rel="prev" title="Aufgabe 3: Dictionaries" href="01_05_Dictionary.html" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="docsearch:language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
 
 
 
@@ -68,14 +89,14 @@
 
 <form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Dieses Buch durchsuchen ..." aria-label="Dieses Buch durchsuchen ..." autocomplete="off" >
 </form>
 
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="index.html">
-   Willkommen bei Coding in GIS !
+   Willkommen bei Coding in GIS
   </a>
  </li>
 </ul>
@@ -86,33 +107,33 @@
 </p>
 <ul class="current nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="01_01_Einleitung.html">
+  <a class="reference internal" href="01_01_Coding_in_GIS_1.html">
    Einleitung zu diesem Block
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="01_02_Primitive_Datentypen.html">
-   Primitive Datentypen
+   Aufgabe 1: Primitive Datentypen
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="01_03_Zusammengesetzte_Datentypen.html">
-   Zusammengesetzte Datentypen
+   Komplexe Datentypen
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="01_04_Listen.html">
-   Listen
+   Aufgabe 2: Listen
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="01_05_Dictionary.html">
-   Dictionaries
+   Aufgabe 3: Dictionaries
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Tabellarische Daten
+   Aufgabe 4: Tabellarische Daten
   </a>
  </li>
 </ul>
@@ -123,22 +144,23 @@
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="02_01_Einleitung.html">
+  <a class="reference internal" href="02_01_Coding_in_GIS_2.html">
    Einleitung zu diesem Block
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="02_01a_Virtual_Environments.html">
-   Virtual Environments mit Conda
+  <a class="reference internal" href="02_02_Conda_Cheatsheet.html">
+   Conda cheat sheet
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="02_01b_Python_Module.html">
+  <a class="reference internal" href="02_03_Python_Module.html">
    Python Modules
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="02_02_Functions_I.html">
+  <a class="reference internal" href="02_04_Functions_I.html">
+   Aufgabe 5:
    <em>
     Function
    </em>
@@ -146,7 +168,8 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="02_03_Functions_II.html">
+  <a class="reference internal" href="02_05_Functions_II.html">
+   Aufgabe 6:
    <em>
     Function
    </em>
@@ -154,17 +177,16 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="02_04_Einzelpunkt_Verschieben.html">
-   Einen Einzelpunkt zufällig verschieben
+  <a class="reference internal" href="02_06_Zufallzahlen.html">
+   Aufgabe 7: Zufallszahlen generieren
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="02_05_Punkte_einer_DataFrame_verschieben.html">
-   Übung Punkte einer
+  <a class="reference internal" href="02_07_Funktionen_in_DataFrames.html">
+   Aufgabe 8: Funktionen in
    <em>
-    DataFrame
+    DataFrames
    </em>
-   zufällig verschieben
   </a>
  </li>
 </ul>
@@ -175,33 +197,84 @@
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="03_01_Einleitung.html">
+  <a class="reference internal" href="03_01_Coding_in_GIS_3.html">
    Einleitung zu diesem Block
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="03_02_For_Loops.html">
-   Übung: For Loops (Teil I)
+   Aufgabe 9:
+   <em>
+    For Loop
+   </em>
+   Einführung
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="03_03_For_Loops.html">
-   Übung: For Loops (Teil II)
+   Aufgabe 10:
+   <em>
+    For Loop
+   </em>
+   Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03_04_For_Loops.html">
+   Aufgabe 11:
+   <em>
+    For Loops
+   </em>
+   Advanced
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="03_04_Zeckenstich_Simulation.html">
-   Übung: Zeckenstich Simulation mit Loop
+   Aufgabe 12: Zeckenstich Simulation
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="03_05_GIS_in_Python.html">
-   Übung: GIS in Python
+   Aufgabe 13: GIS in Python
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="03_06_Waldanteil_Berechnen.html">
-   Übung: Waldanteil berechnen
+  <a class="reference internal" href="03_06_Spatial_Joins.html">
+   Aufgabe 14: Spatial Joins
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Leistungsnachweis
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_01_Leistungsnachweis.html">
+   Einleitung
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_02_Vereinigen.html">
+   Aufgabe 15: Vereinigen aller Einzelteile
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_03_Zusatzauftraege.html">
+   Abgabe Leistungsnachweis
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Anhang
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="05_01_Jupyter_Shortcuts.html">
+   Basic shortcuts for Jupyter lab
   </a>
  </li>
 </ul>
@@ -230,15 +303,15 @@
         
         <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
             data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            aria-expanded="true" aria-label="Navigation umschalten" aria-controls="site-navigation"
+            title="Navigation umschalten" data-toggle="tooltip" data-placement="left">
             <i class="fas fa-bars"></i>
             <i class="fas fa-arrow-left"></i>
             <i class="fas fa-arrow-up"></i>
         </button>
         
         <div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Laden Sie diese Seite herunter"><i
             class="fas fa-download"></i></button>
 
     
@@ -247,10 +320,10 @@
         
         <!-- Download raw file -->
         <a class="dropdown-buttons" href="_sources/01_06_Tabellarische_Daten.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="Quelldatei herunterladen" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="In PDF drucken"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
     
@@ -260,7 +333,7 @@
 
         <!-- Full screen (wrap in <a> to have style consistency -->
         <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                data-placement="bottom" onclick="toggleFullScreen()" title="Vollbildmodus"><i
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
@@ -272,7 +345,7 @@
         
         
         <a class="jupyterhub-button" href="https://jupyterhub01.zhaw.ch/hub/user-redirect/git-pull?repo=https://github.com/ratnanil/codingingis&urlpath=lab/tree/codingingis/01_06_Tabellarische_Daten.ipynb&branch=master"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="Starten JupyterHub" data-toggle="tooltip"
                 data-placement="left"><img class="jupyterhub-button-logo"
                     src="_static/images/logo_jupyterhub.svg"
                     alt="Interact on JupyterHub">JupyterHub</button></a>
@@ -286,59 +359,58 @@
 
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
+        
         <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
+            <i class="fas fa-list"></i> Inhalt
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ubung-1-von-einer-dictionary-zu-einer-dataframe">
-   Übung 1: von einer
-   <em>
-    Dictionary
-   </em>
-   zu einer
-   <em>
-    DataFrame
-   </em>
+  <a class="reference internal nav-link" href="#theorie">
+   Theorie
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ubung-2-dataframe-in-csv-umwandeln">
-   Übung 2:
-   <em>
-    DataFrame
-   </em>
-   in csv umwandeln
+  <a class="reference internal nav-link" href="#ubungen">
+   Übungen
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ubung-3-csv-als-dataframe-importieren">
-   Übung 3: CSV als
-   <em>
-    DataFrame
-   </em>
-   importieren
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ubung-4-koordinaten-raumlich-darstellen">
-   Übung 4: Koordinaten räumlich darstellen
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ubung-5-einzelne-spalte-selektieren">
-   Übung 5: Einzelne Spalte selektieren
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ubung-6-neue-spalte-erstellen">
-   Übung 6: Neue Spalte erstellen
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-4-1">
+     Übung 4.1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-4-2">
+     Übung 4.2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-4-3">
+     Übung 4.3
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-4-4">
+     Übung 4.4
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-4-5">
+     Übung 4.5
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-4-6">
+     Übung 4.6
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
         </nav>
+        
     </div>
 </div>
     <div id="main-content" class="row">
@@ -346,9 +418,11 @@
         
               <div>
                 
-  <div class="section" id="tabellarische-daten">
-<h1>Tabellarische Daten<a class="headerlink" href="#tabellarische-daten" title="Permalink to this headline">¶</a></h1>
-<p>Schauen wir uns nochmals die <em>Dictionary</em> <code class="docutils literal notranslate"><span class="pre">people</span></code> an aus der letzten Übung an. Diese ist ein Spezialfall einer Dictionary: Jeder Eintrag besteht aus einer Liste von gleich vielen Werten. Wie bereits erwähnt, kann es in einem solchen Fall sinnvoll sein, die Dictionary als Tabelle darzustellen.</p>
+  <div class="section" id="aufgabe-4-tabellarische-daten">
+<span id="chap-dataframes"></span><h1>Aufgabe 4: Tabellarische Daten<a class="headerlink" href="#aufgabe-4-tabellarische-daten" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="section" id="theorie">
+<h2>Theorie<a class="headerlink" href="#theorie" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Schauen wir uns nochmals die <em>Dictionary</em> <code class="docutils literal notranslate"><span class="pre">people</span></code> aus der letzten Übung an. Diese ist ein Spezialfall einer Dictionary: Jeder Eintrag besteht aus einer Liste von gleich vielen Werten. Wie bereits erwähnt, kann es in einem solchen Fall sinnvoll sein, die Dictionary als Tabelle darzustellen.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">people</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;vornamen&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Christopher&quot;</span><span class="p">,</span> <span class="s2">&quot;Henning&quot;</span><span class="p">,</span> <span class="s2">&quot;Severin&quot;</span><span class="p">],</span> <span class="s2">&quot;nachnamen&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Annen&quot;</span><span class="p">,</span><span class="s2">&quot;May&quot;</span><span class="p">,</span> <span class="s2">&quot;Kantereit&quot;</span><span class="p">],</span> <span class="s2">&quot;groessen&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">174</span><span class="p">,</span> <span class="mi">182</span><span class="p">,</span> <span class="mi">162</span><span class="p">]}</span>
@@ -356,13 +430,84 @@
 </div>
 </div>
 </div>
-<div class="section" id="ubung-1-von-einer-dictionary-zu-einer-dataframe">
-<h2>Übung 1: von einer <em>Dictionary</em> zu einer <em>DataFrame</em><a class="headerlink" href="#ubung-1-von-einer-dictionary-zu-einer-dataframe" title="Permalink to this headline">¶</a></h2>
-<p>Wandle die Dictionary <code class="docutils literal notranslate"><span class="pre">people</span></code> in eine DataFrame um. Dazu musst du zuerst <code class="docutils literal notranslate"><span class="pre">pandas</span></code> importieren und danach <code class="docutils literal notranslate"><span class="pre">people</span></code> als Argument der Funktion <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> übergeben (siehe Beispiel oben). Weise den Output der Variable <code class="docutils literal notranslate"><span class="pre">people_df</span></code> zu und schaue es dir im <em>Variable Explorer</em> an.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> <span class="c1"># Was diese Zeile beudeutet lernen wir später</span>
+
+<span class="n">people_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">people</span><span class="p">)</span>
+
+<span class="n">people_df</span>
+</pre></div>
 </div>
-<div class="section" id="ubung-2-dataframe-in-csv-umwandeln">
-<h2>Übung 2: <em>DataFrame</em> in csv umwandeln<a class="headerlink" href="#ubung-2-dataframe-in-csv-umwandeln" title="Permalink to this headline">¶</a></h2>
-<p>In der Praxis kommen Tabellarische Daten meist als «csv» Dateien daher. Wir können aus unserer eben erstellten DataFrame sehr einfach eine csv Datei erstellen. Führe das mit folgendem Code aus:</p>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>vornamen</th>
+      <th>nachnamen</th>
+      <th>groessen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Christopher</td>
+      <td>Annen</td>
+      <td>174</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Henning</td>
+      <td>May</td>
+      <td>182</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Severin</td>
+      <td>Kantereit</td>
+      <td>162</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="ubungen">
+<h2>Übungen<a class="headerlink" href="#ubungen" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="ubung-4-1">
+<h3>Übung 4.1<a class="headerlink" href="#ubung-4-1" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Importiere <code class="docutils literal notranslate"><span class="pre">pandas</span></code> und nutze die Funktion <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> um <code class="docutils literal notranslate"><span class="pre">people</span></code> in eine DataFrame umzuwandeln (siehe dazu das beispiel oben). Weise den Output der Variable <code class="docutils literal notranslate"><span class="pre">people_df</span></code> zu und schaue es dir im <em>Variable Explorer</em> an.</p>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
+
+<span class="n">people_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">people</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ubung-4-2">
+<span id="ex-to-csv"></span><h3>Übung 4.2<a class="headerlink" href="#ubung-4-2" title="Link zu dieser Überschrift">¶</a></h3>
+<p>In der Praxis kommen Tabellarische Daten meist als „csv“ Dateien daher. Wir können aus unserer eben erstellten DataFrame sehr einfach eine csv Datei erstellen. Führe das mit folgendem Code aus und suche anschliessend die erstellte csv-Datei.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">people_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;people.csv&quot;</span><span class="p">)</span>
@@ -371,9 +516,9 @@
 </div>
 </div>
 </div>
-<div class="section" id="ubung-3-csv-als-dataframe-importieren">
-<h2>Übung 3: CSV als <em>DataFrame</em> importieren<a class="headerlink" href="#ubung-3-csv-als-dataframe-importieren" title="Permalink to this headline">¶</a></h2>
-<p>Genau so einfach ist es eine csv zu importieren. Lade <a class="reference external" href="https://raw.githubusercontent.com/ratnanil/codingingis/master/zeckenstiche.csv">hier die Datei “zeckenstiche.csv”</a> (Rechtsklick –&gt; Ziel speichern unter) herunter und speichere es im aktuellen Arbeitsverzeichnis ab. Importiere mit folgendem Code die Datei “zeckenstiche.csv”. Schau dir <code class="docutils literal notranslate"><span class="pre">zeckenstiche</span></code> nach dem importieren im “Variable Inspector” an.</p>
+<div class="section" id="ubung-4-3">
+<span id="ex-import-zeckenstiche"></span><h3>Übung 4.3<a class="headerlink" href="#ubung-4-3" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Genau so einfach ist es eine csv zu importieren. Lade <a class="reference external" href="https://raw.githubusercontent.com/ratnanil/codingingis/master/zeckenstiche.csv">hier die Datei „zeckenstiche.csv“</a> (Rechtsklick –&gt; Ziel speichern unter) herunter und speichere es im aktuellen Arbeitsverzeichnis ab. Importiere mit folgendem Code die Datei „zeckenstiche.csv“. Schau dir <code class="docutils literal notranslate"><span class="pre">zeckenstiche</span></code> nach dem importieren im „Variable Inspector“ an.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zeckenstiche</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;zeckenstiche.csv&quot;</span><span class="p">)</span>
@@ -384,8 +529,11 @@
 <div class="tip admonition">
 <p class="admonition-title">Achtung!</p>
 <ul class="simple">
-<li><p>Wenn du auf dem JupyterHub Server arbeitest dann ist dein Arbeitsverzeichnis ebenfalls <em>auf dem Server</em>. Das heisst, du musst “zeckenstiche.csv” auf den Server hochladen. Dies kannst du mit dem Button “Upload Files” im Tab “File Browser” bewerkstelligen.</p></li>
-<li><p>der obige Code funktioniert nur, wenn “zeckenstiche.csv” im aktuellen Arbeitsverzeichnis (<em>Current Working Directory</em>) abgespeichert ist. Wenn du nicht sicher bist, wo dein aktuelles Arbeitsverzeichnis liegt, kannst du dies mit der Funktion <code class="docutils literal notranslate"><span class="pre">os.getcwd()</span></code> (get <strong>c</strong>urrent<strong>w</strong>orking<strong>d</strong>irectory) herausfinden (s.u.).</p></li>
+<li><p>Wenn du auf dem JupyterHub Server arbeitest dann ist dein Arbeitsverzeichnis ebenfalls <em>auf dem Server</em>. Das heisst, du musst „zeckenstiche.csv“ auf den Server hochladen. Dies kannst du mit dem Button „Upload Files“ im Tab „File Browser“ bewerkstelligen (s.u.).</p></li>
+</ul>
+<img alt="_images/upload.jpg" id="label" src="_images/upload.jpg" />
+<ul class="simple">
+<li><p>Der Code (<code class="docutils literal notranslate"><span class="pre">pd.read_csv(&quot;zeckenstiche.csv&quot;)</span></code>) funktioniert nur, wenn „zeckenstiche.csv“ im aktuellen Arbeitsverzeichnis (<em>Current Working Directory</em>) abgespeichert ist. Wenn du nicht sicher bist, wo dein aktuelles Arbeitsverzeichnis liegt, kannst du dies mit der Funktion <code class="docutils literal notranslate"><span class="pre">os.getcwd()</span></code> (<strong>get</strong> <strong>c</strong>urrent <strong>w</strong>orking <strong>d</strong>irectory) herausfinden (s.u.).</p></li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
@@ -393,14 +541,14 @@
 </div>
 </div>
 </div>
-<div class="section" id="ubung-4-koordinaten-raumlich-darstellen">
-<h2>Übung 4: Koordinaten räumlich darstellen<a class="headerlink" href="#ubung-4-koordinaten-raumlich-darstellen" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ubung-4-4">
+<span id="ex-scatterplot"></span><h3>Übung 4.4<a class="headerlink" href="#ubung-4-4" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Die <em>DataFrame</em> <code class="docutils literal notranslate"><span class="pre">zeckenstiche</span></code> beinhaltet x und y Koordinaten für jeden Unfall in den gleichnamigen Spalten. Wir können die Stiche mit einem Scatterplot räumlich visualisieren. Führe dazu folgenden Code aus. Überlege dir, was die zweite Zeile bewirkt und warum dies sinnvoll ist.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">zeckenstiche</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span><span class="s2">&quot;y&quot;</span><span class="p">)</span>
 
-<span class="n">fig</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;scaled&quot;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;equal&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -408,17 +556,62 @@
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2681088.05, 2681174.95, 1250644.15, 1250728.85)
 </pre></div>
 </div>
-<img alt="_images/01_06_Tabellarische_Daten_12_1.png" src="_images/01_06_Tabellarische_Daten_12_1.png" />
+<img alt="_images/01_06_Tabellarische_Daten_13_1.png" src="_images/01_06_Tabellarische_Daten_13_1.png" />
+</div>
+</div>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
+
+<span class="c1"># fig.axis(&quot;equal&quot;) sorgt dafür, dass die Skala der beiden Achsen</span>
+<span class="c1"># (x und y) gleich sind. Dies ist desshalb sinnvoll, da es sich um </span>
+<span class="c1"># räumliche Koordinaten handelt und die Distanzen in Richtung &quot;Nord-Süd&quot;</span>
+<span class="c1"># (y-Achse) sowie in &quot;West-Ost&quot; (x-Achse) die gleiche Skala haben (Meter)</span>
+<span class="c1"># https://matplotlib.org/3.1.3/api/_as_gen/matplotlib.pyplot.axis.html</span>
+</pre></div>
 </div>
 </div>
 </div>
-<div class="section" id="ubung-5-einzelne-spalte-selektieren">
-<h2>Übung 5: Einzelne Spalte selektieren<a class="headerlink" href="#ubung-5-einzelne-spalte-selektieren" title="Permalink to this headline">¶</a></h2>
-<p>Um eine einzelne Spalte zu selektieren (z.B. die Spalte “ID”) kann man gleich vorgehen wie bei der Selektion eines Eintrage in einer <em>Dictionary</em>. Probiere es aus.</p>
 </div>
-<div class="section" id="ubung-6-neue-spalte-erstellen">
-<h2>Übung 6: Neue Spalte erstellen<a class="headerlink" href="#ubung-6-neue-spalte-erstellen" title="Permalink to this headline">¶</a></h2>
-<p>Auch das Erstellen einer neuen Spalte ist identisch mit der Erstellung eines neuen <em>Dictionary</em> Eintrags. Erstelle eine neue Spalte “Stichtyp” mit dem Wert “Zecke” auf jeder Zeile (s.u.).</p>
+<div class="section" id="ubung-4-5">
+<span id="ex-sel-col"></span><h3>Übung 4.5<a class="headerlink" href="#ubung-4-5" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Um eine einzelne Spalte zu selektieren (z.B. die Spalte „ID“), kann man gleich vorgehen wie bei der Selektion eines Eintrags in einer <em>Dictionary</em>. Probiere es aus.</p>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
+
+<span class="n">zeckenstiche</span><span class="p">[</span><span class="s2">&quot;ID&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     2550
+1    10437
+2     9174
+3     8773
+4     2764
+5     2513
+6     9185
+7    28521
+8    26745
+9    27391
+Name: ID, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ubung-4-6">
+<span id="ex-new-col"></span><h3>Übung 4.6<a class="headerlink" href="#ubung-4-6" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Auch das Erstellen einer neuen Spalte ist identisch mit der Erstellung eines neuen <em>Dictionary</em> Eintrags. Erstelle eine neue Spalte „Stichtyp“ mit dem Wert „Zecke“ auf jeder Zeile (s.u.).</p>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Musterlösung</span>
+<span class="n">zeckenstiche</span><span class="p">[</span><span class="s2">&quot;Stichtyp&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Zecke&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">zeckenstiche</span>
@@ -538,6 +731,7 @@
 </div>
 </div>
 </div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -567,8 +761,8 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="01_05_Dictionary.html" title="previous page">Dictionaries</a>
-    <a class='right-next' id="next-link" href="02_01_Einleitung.html" title="next page">Einleitung zu diesem Block</a>
+    <a class='left-prev' id="prev-link" href="01_05_Dictionary.html" title="previous page">Aufgabe 3: Dictionaries</a>
+    <a class='right-next' id="next-link" href="02_01_Coding_in_GIS_2.html" title="next page">Einleitung zu diesem Block</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
@@ -587,7 +781,10 @@
       </div>
     </div>
 
-    <script src="_static/js/index.js"></script>
+    
+  <script src="_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
     
   </body>
 </html>
