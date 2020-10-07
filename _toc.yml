@@ -28,6 +28,7 @@
   - file: 03_04_For_Loops
   - file: 03_04_Zeckenstich_Simulation
   - file: 03_05_GIS_in_Python
+  - file: 03_06_Raeumliche_Operationen
   - file: 03_06_Spatial_Joins
   
 - part: Leistungsnachweis
@@ -39,4 +40,5 @@
 
 - part: Anhang
   chapters:
-  - file: 05_01_Jupyter_Shortcuts
+  - file: 05_01_GIS_Demo
+  - file: 05_02_Jupyter_Shortcuts
