@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Einleitung zu diesem Block &#8212; Coding in GIS</title>
     
-  <link rel="stylesheet" href="_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
     
   <link rel="stylesheet"
@@ -25,7 +25,7 @@
     href="_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="_static/sphinx-book-theme.bfb7730f9caf2ec0b46a44615585038c.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.30270b6e4c972e43c488.js">
+  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
 
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -59,7 +59,7 @@
     <link rel="shortcut icon" href="_static/favicon.png"/>
     <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
     <link rel="search" title="Suche" href="search.html" />
-    <link rel="next" title="Aufgabe 9: For Loop Einführung" href="03_02_For_Loops.html" />
+    <link rel="next" title="Aufgabe 9: for loop Einführung" href="03_02_For_Loops.html" />
     <link rel="prev" title="Aufgabe 8: Funktionen in DataFrames" href="02_07_Funktionen_in_DataFrames.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -205,7 +205,7 @@
   <a class="reference internal" href="03_02_For_Loops.html">
    Aufgabe 9:
    <em>
-    For Loop
+    for loop
    </em>
    Einführung
   </a>
@@ -214,7 +214,7 @@
   <a class="reference internal" href="03_03_For_Loops.html">
    Aufgabe 10:
    <em>
-    For Loop
+    for loop
    </em>
    Basics
   </a>
@@ -223,7 +223,7 @@
   <a class="reference internal" href="03_04_For_Loops.html">
    Aufgabe 11:
    <em>
-    For Loops
+    for loops
    </em>
    Advanced
   </a>
@@ -235,12 +235,17 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="03_05_GIS_in_Python.html">
-   Aufgabe 13: GIS in Python
+   GIS in Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03_06_Raeumliche_Operationen.html">
+   Aufgabe 13: Räumliche Operationen
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="03_06_Spatial_Joins.html">
-   Aufgabe 14: Spatial Joins
+   Aufgabe 14: Spatial Join
   </a>
  </li>
 </ul>
@@ -257,7 +262,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="04_02_Vereinigen.html">
-   Aufgabe 15: Vereinigen aller Einzelteile
+   Aufgabe 15: Grand Finale
   </a>
  </li>
  <li class="toctree-l1">
@@ -273,7 +278,12 @@
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="05_01_Jupyter_Shortcuts.html">
+  <a class="reference internal" href="05_01_GIS_Demo.html">
+   Demo: Geodaten visualisieren
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05_02_Jupyter_Shortcuts.html">
    Basic shortcuts for Jupyter lab
   </a>
  </li>
@@ -333,7 +343,8 @@
 
         <!-- Full screen (wrap in <a> to have style consistency -->
         <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" title="Vollbildmodus"><i
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Vollbildmodus"
+                title="Vollbildmodus"><i
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
@@ -369,13 +380,16 @@
                 
   <div class="section" id="einleitung-zu-diesem-block">
 <h1>Einleitung zu diesem Block<a class="headerlink" href="#einleitung-zu-diesem-block" title="Link zu dieser Überschrift">¶</a></h1>
+<p>Heute widmen wir uns zwei grossen Themen bevor wir uns an die Umsetzung der Monte Carlo Simulation (<a class="reference internal" href="04_02_Vereinigen.html#chap-waldanteil"><span class="std std-ref">Aufgabe 15: Grand Finale</span></a>) wenden.</p>
+<p>Im ersten Thema geht es um <em>for Loops</em>, mit denen wir eine Aufgabe mehrfach („Iterativ“) durchzuführen können. Ein <em>for Loop</em> ist ein sehr wichtiges und hilfreiches Werkzeug das man unbedingt kennen sollte. Wir werden <em>for loops</em> brauchen um Zeckenstiche zu simulieren, indem wir die bestehenden Meldungen x-fach zufällig verschieben. Das Thema <em>for loops</em> behandeln wir in <a class="reference internal" href="03_02_For_Loops.html#forloops-1"><span class="std std-ref">Aufgabe 9: for loop Einführung</span></a>, <a class="reference internal" href="03_03_For_Loops.html#forloops-2"><span class="std std-ref">Aufgabe 10: for loop Basics</span></a> und <a class="reference internal" href="03_04_For_Loops.html#forloops-3"><span class="std std-ref">Aufgabe 11: for loops Advanced</span></a>.</p>
+<p>Beim zweiten Thema geht es um GIS. Wir haben bisher mit Daten gearbeitet die eine Rauminformation beinhalten, die Zeckenstiche haben x/y-Koordinaten. Diese Rauminformation haben wir aber nicht als solche behandelt, wir haben die Koordinaten als Zahlen eingelesen und uns nicht gross darum geschert, dass es sich dabei um spezifische Punkte in der Schweiz handelt. Heute werden wir dies ändern müssen da uns eine räumliche Abfrage bevorsteht: Wir wollen nämlich wissen, welche Zeckenstiche sich im Wald befinden. Dadurch lernen wir eine neue Erweiterung kennen und sehen, was für räumliche Operationen in Python möglich sind. Das Thema behandeln wir in <a class="reference internal" href="03_05_GIS_in_Python.html#chap-pythongis"><span class="std std-ref">GIS in Python</span></a>, <a class="reference internal" href="03_06_Raeumliche_Operationen.html#chap-raeumliche-operationen"><span class="std std-ref">Aufgabe 13: Räumliche Operationen</span></a> und <a class="reference internal" href="03_06_Spatial_Joins.html#chap-spatialjoin"><span class="std std-ref">Aufgabe 14: Spatial Join</span></a>.</p>
 <div class="attention admonition">
 <p class="admonition-title">Übungsziele</p>
 <ul class="simple">
-<li><p>Ihr kennt For-Loops und könnt sie anwenden</p></li>
-<li><p>Ihr verwendet eure erste räumliche Operation «Spatial Join» und wisst, dass es hier eine ganze Palette an weiteren Operatoren gibt</p></li>
-<li><p>Ihr könnt eine (Geo-) DataFrame nach Gruppe Zusammenfassen</p></li>
-<li><p>Ihr lernt weitere Visualisierungstechniken kennen</p></li>
+<li><p>Ihr kennt <em>for-Loops</em> und könnt sie anwenden</p></li>
+<li><p>Ihr seht, was mit räumlichen Operationen in Python möglich ist und kennt ein Tool, welches dazu notwendig ist</p></li>
+<li><p>Ihr könnt räumliche Operationen (<em>spatial join</em>, <em>overlay</em>) in Python umsetzen</p></li>
+<li><p>Ihr könnt summary Statistiken (mit <code class="docutils literal notranslate"><span class="pre">groupby</span></code>/<code class="docutils literal notranslate"><span class="pre">count</span></code>) aus DataFrames extrahieren</p></li>
 </ul>
 </div>
 </div>
@@ -409,7 +423,7 @@
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="02_07_Funktionen_in_DataFrames.html" title="previous page">Aufgabe 8: Funktionen in <em>DataFrames</em></a>
-    <a class='right-next' id="next-link" href="03_02_For_Loops.html" title="next page">Aufgabe 9: <em>For Loop</em> Einführung</a>
+    <a class='right-next' id="next-link" href="03_02_For_Loops.html" title="next page">Aufgabe 9: <em>for loop</em> Einführung</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
@@ -429,7 +443,7 @@
     </div>
 
     
-  <script src="_static/js/index.30270b6e4c972e43c488.js"></script>
+  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
 
 
     

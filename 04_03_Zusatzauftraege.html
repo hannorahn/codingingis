@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Abgabe Leistungsnachweis &#8212; Coding in GIS</title>
     
-  <link rel="stylesheet" href="_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
     
   <link rel="stylesheet"
@@ -25,7 +25,7 @@
     href="_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="_static/sphinx-book-theme.bfb7730f9caf2ec0b46a44615585038c.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.30270b6e4c972e43c488.js">
+  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
 
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -59,8 +59,8 @@
     <link rel="shortcut icon" href="_static/favicon.png"/>
     <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
     <link rel="search" title="Suche" href="search.html" />
-    <link rel="next" title="Basic shortcuts for Jupyter lab" href="05_01_Jupyter_Shortcuts.html" />
-    <link rel="prev" title="Aufgabe 15: Vereinigen aller Einzelteile" href="04_02_Vereinigen.html" />
+    <link rel="next" title="Demo: Geodaten visualisieren" href="05_01_GIS_Demo.html" />
+    <link rel="prev" title="Aufgabe 15: Grand Finale" href="04_02_Vereinigen.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -205,7 +205,7 @@
   <a class="reference internal" href="03_02_For_Loops.html">
    Aufgabe 9:
    <em>
-    For Loop
+    for loop
    </em>
    Einführung
   </a>
@@ -214,7 +214,7 @@
   <a class="reference internal" href="03_03_For_Loops.html">
    Aufgabe 10:
    <em>
-    For Loop
+    for loop
    </em>
    Basics
   </a>
@@ -223,7 +223,7 @@
   <a class="reference internal" href="03_04_For_Loops.html">
    Aufgabe 11:
    <em>
-    For Loops
+    for loops
    </em>
    Advanced
   </a>
@@ -235,12 +235,17 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="03_05_GIS_in_Python.html">
-   Aufgabe 13: GIS in Python
+   GIS in Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03_06_Raeumliche_Operationen.html">
+   Aufgabe 13: Räumliche Operationen
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="03_06_Spatial_Joins.html">
-   Aufgabe 14: Spatial Joins
+   Aufgabe 14: Spatial Join
   </a>
  </li>
 </ul>
@@ -257,7 +262,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="04_02_Vereinigen.html">
-   Aufgabe 15: Vereinigen aller Einzelteile
+   Aufgabe 15: Grand Finale
   </a>
  </li>
  <li class="toctree-l1 current active">
@@ -273,7 +278,12 @@
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="05_01_Jupyter_Shortcuts.html">
+  <a class="reference internal" href="05_01_GIS_Demo.html">
+   Demo: Geodaten visualisieren
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05_02_Jupyter_Shortcuts.html">
    Basic shortcuts for Jupyter lab
   </a>
  </li>
@@ -333,7 +343,8 @@
 
         <!-- Full screen (wrap in <a> to have style consistency -->
         <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" title="Vollbildmodus"><i
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Vollbildmodus"
+                title="Vollbildmodus"><i
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
@@ -395,14 +406,14 @@
                 
   <div class="section" id="abgabe-leistungsnachweis">
 <h1>Abgabe Leistungsnachweis<a class="headerlink" href="#abgabe-leistungsnachweis" title="Link zu dieser Überschrift">¶</a></h1>
-<p>Folgendes müsst ihr für den Leistungsnachweis für Coding in GIS abgeben:</p>
+<p>Für den Leistungsnachweis in Coding in GIS sollt ihr einen Report abgeben. Hier sind die Rahmenbedigungen:</p>
 <ul class="simple">
 <li><p><strong>Ziel</strong>: Beantwortung der Frage „<em>Welcher Anteil der Zeckenstiche befinden sich im Wald</em>“ unter besonderer Berücksichtigung der Datenungenauigkeit.</p></li>
-<li><p><strong>Inhalt</strong>: Vorgehen gemäss <a class="reference internal" href="04_01_Leistungsnachweis.html#fig-sim-workflow"><span class="std std-numref">Abb. 5</span></a>, der Inhalt ist gegeben durch <a class="reference internal" href="04_02_Vereinigen.html#chap-waldanteil"><span class="std std-ref">Aufgabe 15: Vereinigen aller Einzelteile</span></a> sowie der <a class="reference internal" href="#chap-abgabe-zusatz"><span class="std std-ref">Zusatzaufträge</span></a></p></li>
-<li><p><strong>Struktur</strong>: Führt die Datenanlyse durch, indem ihr den Python Code mit Markdown Text unterstützt. Erzählt in groben Zügen, was für Analyseschritte gemacht werden und wie die Resultate zu interpetieren sind.</p></li>
+<li><p><strong>Inhalt</strong>: Vorgehen gemäss <a class="reference internal" href="04_01_Leistungsnachweis.html#fig-sim-workflow"><span class="std std-numref">Abb. 5</span></a>, der Inhalt ist gegeben durch <a class="reference internal" href="04_02_Vereinigen.html#chap-waldanteil"><span class="std std-ref">Aufgabe 15: Grand Finale</span></a> sowie der <a class="reference internal" href="#chap-abgabe-zusatz"><span class="std std-ref">Zusatzaufträge</span></a></p></li>
+<li><p><strong>Struktur</strong>: Führt die Datenanlyse durch, indem ihr den Python Code mit Markdown Text unterstützt. Beschreibt und begründet eure Analyseschritte und wie die Resultate zu interpetieren sind. Der Fokus soll auf der technischen Umsetzung liegen, nicht auf der Interpretation der Resultate.</p></li>
 <li><p><strong>Abgabe</strong>:</p>
 <ul>
-<li><p>Ein Jupyter-Notebook-File (*.ipynb)</p></li>
+<li><p>Ein Jupyter-Notebook-File (*.ipynb) <strong>und</strong></p></li>
 <li><p>Ein html-Export des Jupyter-Notebook Files:</p>
 <ul>
 <li><p><strong>Wichtig:</strong> Zuerst alle Zellen ausführen (<em>Run &gt; Run all cells</em>)</p></li>
@@ -427,7 +438,7 @@
 <p>Wir simulieren die Zeckenstiche, indem wir die Original-Meldungen mit der Funktion <code class="docutils literal notranslate"><span class="pre">offset_coordinate</span></code> um einen Zufallswert verschieben (siehe <a class="reference internal" href="02_06_Zufallzahlen.html#ex-offset-function"><span class="std std-ref">Übung 7.5</span></a>). Dieser Zufallswert stammt aus einer Verteilung mit Mittelwert <code class="docutils literal notranslate"><span class="pre">0</span></code> und Standartabweichung <code class="docutils literal notranslate"><span class="pre">100</span></code>. Variere in deiner Analyse die Standartabweichung und nutze nebst <code class="docutils literal notranslate"><span class="pre">100</span></code> zwei andere Werte, Beispielsweise <code class="docutils literal notranslate"><span class="pre">10</span></code> und <code class="docutils literal notranslate"><span class="pre">1'000</span></code>. Schau dir <a class="reference internal" href="02_07_Funktionen_in_DataFrames.html#ex-param"><span class="std std-ref">Übung 8.4</span></a> nochmals an wenn du nicht mehr weisst, wie das geht.</p>
 <div class="dropdown admonition tip">
 <p class="admonition-title">Tipp</p>
-<p><strong>Für Profis</strong>: Statt das ihr den <em>For Loop</em> 3x kopiert könnt ihr auch einen verschachtelten <em>For Loop</em> konstuieren, wo der äussere <em>Loop</em> über die Radien iteriert, der innere besteht aus dem bisherigen <em>For Loop</em>. Wichtig dabei ist, dass die Liste <code class="docutils literal notranslate"><span class="pre">monte_carlo</span></code> vor dem äusseren Loop kontruiert wird und im DataFrame jeweils gespeichert wird, was für ein Radius verwendet wurde. Diese Spalte kann danach in <code class="docutils literal notranslate"><span class="pre">groupby</span></code> wie auch bei <code class="docutils literal notranslate"><span class="pre">.boxplot()</span></code> verwendet werden (siehe unten)Q.</p>
+<p><strong>Für Profis</strong>: Statt das ihr den <em>For Loop</em> 3x kopiert könnt ihr auch einen verschachtelten <em>For Loop</em> konstuieren, wo der äussere <em>Loop</em> über die Radien iteriert, der innere besteht aus dem bisherigen <em>For Loop</em>. Wichtig dabei ist, dass die Liste <code class="docutils literal notranslate"><span class="pre">monte_carlo</span></code> vor dem äusseren Loop kontruiert wird und im DataFrame jeweils gespeichert wird, was für ein Radius verwendet wurde. Diese Spalte kann danach in <code class="docutils literal notranslate"><span class="pre">groupby</span></code> wie auch bei <code class="docutils literal notranslate"><span class="pre">.boxplot()</span></code> verwendet werden (siehe unten).</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -470,8 +481,8 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="04_02_Vereinigen.html" title="previous page">Aufgabe 15: Vereinigen aller Einzelteile</a>
-    <a class='right-next' id="next-link" href="05_01_Jupyter_Shortcuts.html" title="next page">Basic shortcuts for Jupyter lab</a>
+    <a class='left-prev' id="prev-link" href="04_02_Vereinigen.html" title="previous page">Aufgabe 15: Grand Finale</a>
+    <a class='right-next' id="next-link" href="05_01_GIS_Demo.html" title="next page">Demo: Geodaten visualisieren</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
@@ -491,7 +502,7 @@
     </div>
 
     
-  <script src="_static/js/index.30270b6e4c972e43c488.js"></script>
+  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
 
 
     

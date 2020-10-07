@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aufgabe 9: For Loop Einführung &#8212; Coding in GIS</title>
+    <title>Aufgabe 9: for loop Einführung &#8212; Coding in GIS</title>
     
-  <link rel="stylesheet" href="_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
     
   <link rel="stylesheet"
@@ -25,7 +25,7 @@
     href="_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="_static/sphinx-book-theme.bfb7730f9caf2ec0b46a44615585038c.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.30270b6e4c972e43c488.js">
+  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
 
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -59,7 +59,7 @@
     <link rel="shortcut icon" href="_static/favicon.png"/>
     <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
     <link rel="search" title="Suche" href="search.html" />
-    <link rel="next" title="Aufgabe 10: For Loop Basics" href="03_03_For_Loops.html" />
+    <link rel="next" title="Aufgabe 10: for loop Basics" href="03_03_For_Loops.html" />
     <link rel="prev" title="Einleitung zu diesem Block" href="03_01_Coding_in_GIS_3.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -205,7 +205,7 @@
   <a class="current reference internal" href="#">
    Aufgabe 9:
    <em>
-    For Loop
+    for loop
    </em>
    Einführung
   </a>
@@ -214,7 +214,7 @@
   <a class="reference internal" href="03_03_For_Loops.html">
    Aufgabe 10:
    <em>
-    For Loop
+    for loop
    </em>
    Basics
   </a>
@@ -223,7 +223,7 @@
   <a class="reference internal" href="03_04_For_Loops.html">
    Aufgabe 11:
    <em>
-    For Loops
+    for loops
    </em>
    Advanced
   </a>
@@ -235,12 +235,17 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="03_05_GIS_in_Python.html">
-   Aufgabe 13: GIS in Python
+   GIS in Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03_06_Raeumliche_Operationen.html">
+   Aufgabe 13: Räumliche Operationen
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="03_06_Spatial_Joins.html">
-   Aufgabe 14: Spatial Joins
+   Aufgabe 14: Spatial Join
   </a>
  </li>
 </ul>
@@ -257,7 +262,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="04_02_Vereinigen.html">
-   Aufgabe 15: Vereinigen aller Einzelteile
+   Aufgabe 15: Grand Finale
   </a>
  </li>
  <li class="toctree-l1">
@@ -273,7 +278,12 @@
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="05_01_Jupyter_Shortcuts.html">
+  <a class="reference internal" href="05_01_GIS_Demo.html">
+   Demo: Geodaten visualisieren
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05_02_Jupyter_Shortcuts.html">
    Basic shortcuts for Jupyter lab
   </a>
  </li>
@@ -333,7 +343,8 @@
 
         <!-- Full screen (wrap in <a> to have style consistency -->
         <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" title="Vollbildmodus"><i
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Vollbildmodus"
+                title="Vollbildmodus"><i
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
@@ -431,12 +442,12 @@
               <div>
                 
   <div class="section" id="aufgabe-9-for-loop-einfuhrung">
-<span id="forloops-1"></span><h1>Aufgabe 9: <em>For Loop</em> Einführung<a class="headerlink" href="#aufgabe-9-for-loop-einfuhrung" title="Link zu dieser Überschrift">¶</a></h1>
+<span id="forloops-1"></span><h1>Aufgabe 9: <em>for loop</em> Einführung<a class="headerlink" href="#aufgabe-9-for-loop-einfuhrung" title="Link zu dieser Überschrift">¶</a></h1>
 <div class="section" id="theorie">
 <h2>Theorie<a class="headerlink" href="#theorie" title="Link zu dieser Überschrift">¶</a></h2>
 <div class="section" id="die-grundform">
 <h3>Die Grundform<a class="headerlink" href="#die-grundform" title="Link zu dieser Überschrift">¶</a></h3>
-<p>Nirgends ist der Aspekt der Automatisierung so sichtbar wie in <em>for Loops</em>. Loops sind „Schleifen“ wo eine Aufgabe so lange wiederholt wird, bis ein Ende erreicht worden ist. Auch For-Loops sind im Grunde genommen sehr einfach. Auf den ersten Blick sieht eine For Loop aus wie eine <em>Function</em> definition (siehe <a class="reference internal" href="02_04_Functions_I.html#function-basics"><span class="std std-ref">Aufgabe 5: Function Basics</span></a> und <a class="reference internal" href="02_05_Functions_II.html#function-advanced"><span class="std std-ref">Aufgabe 6: Function Advanced</span></a>). Im folgenden Beispiel seht ihr ein minimales Beispiel einer <em>For Loop</em>.</p>
+<p>Nirgends ist der Aspekt der Automatisierung so sichtbar wie in <em>for loops</em>. Loops sind „Schleifen“ wo eine Aufgabe beliebig lange wiederholt wird. Auch <em>for loops</em> sind im Grunde genommen simple. Auf den ersten Blick sieht eine <em>for loop</em> aus wie eine <em>Function</em> definition (siehe <a class="reference internal" href="02_04_Functions_I.html#function-basics"><span class="std std-ref">Aufgabe 5: Function Basics</span></a> und <a class="reference internal" href="02_05_Functions_II.html#function-advanced"><span class="std std-ref">Aufgabe 6: Function Advanced</span></a>). Im folgenden Beispiel seht ihr ein minimales Beispiel einer <em>for loop</em>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">platzhalter</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]:</span>
@@ -458,13 +469,14 @@ Iteration 2
 <li><p>Nach dem Platzhalter kommt der Begriff <code class="docutils literal notranslate"><span class="pre">in</span></code>. Dieser Begriff kommt zwingend nach dem Platzhalter.</p></li>
 <li><p>Nach <code class="docutils literal notranslate"><span class="pre">in</span></code> wird der „Iterator“ festgelegt, also worüber der For-Loop iterieren soll (hier: über eine <code class="docutils literal notranslate"><span class="pre">List</span></code> mit den Werten <code class="docutils literal notranslate"><span class="pre">[0,1,2]</span></code>).</p></li>
 <li><p>Danach kommt ein Doppelpunkt <code class="docutils literal notranslate"><span class="pre">:</span></code> der zeigt: „Nun legen wir gleich fest was im For-Loop passieren soll“ (ähnlich wie in einer <em>Function</em>)</p></li>
-<li><p>Auf einer neuen Zeile wird eingerückt festgelegt, was in der <em>For-Loop</em> passieren soll. In unserem Fall wird etwas Nonsens in die Konsole ausgespuckt</p></li>
-<li><p>Achtung: <code class="docutils literal notranslate"><span class="pre">return()</span></code> gibt’s in For-Loops nicht. Ich nutze hier deshalb <em>print</em><a class="footnote-reference brackets" href="#print" id="id1">1</a>, damit in der Konsole etwas erscheint.</p></li>
+<li><p>Auf einer neuen Zeile wird eingerückt festgelegt, was in der <em>For-Loop</em> passieren soll. Dieser Teil kann beliebig lange sein, ein <em>for loop</em> ist dann fertig, wenn man nicht mehr eingerückt wird. In unserem Fall wird mit <code class="docutils literal notranslate"><span class="pre">print</span></code><a class="footnote-reference brackets" href="#print" id="id1">1</a> etwas in die Konsole ausgegeben.</p></li>
+<li><p>Achtung: <code class="docutils literal notranslate"><span class="pre">return()</span></code> gibt’s in For-Loops nicht!</p></li>
 </ul>
 </div>
 <div class="section" id="der-iterator">
 <h3>Der Iterator<a class="headerlink" href="#der-iterator" title="Link zu dieser Überschrift">¶</a></h3>
-<p>Im obigen Beispiel haben wir über eine <em>List</em> iteriert, wir haben also eine Liste als Iterator verwendet. Es gibt aber noch andere „Dinge“, über die wir iterieren können. Angenommen wir wollen das Gleiche machen wie oben, aber nicht mit den Zahlen 0, 1 und 2, sondern von 0 bis 100 oder 100 bis 1’000. Es wäre ganz schön mühsam, alle Zahlen von 0 bis 100 manuell in einer Liste zu erfassen. Zu diesem Zweck können wir die Funktion <code class="docutils literal notranslate"><span class="pre">range</span></code> verwenden. Mit <code class="docutils literal notranslate"><span class="pre">range(3)</span></code> erstellen wir einen Iterator mit den Werten 0, 1 und 2. Mit <code class="docutils literal notranslate"><span class="pre">range(100,1001)</span></code> erhalten wir die Werte von 100 bis 1’000. Um den gleichen Loop wie oben mit <code class="docutils literal notranslate"><span class="pre">range</span></code> zu erstellen, ersetzen wir einfach <code class="docutils literal notranslate"><span class="pre">[0,1,2]</span></code> mit <code class="docutils literal notranslate"><span class="pre">range(3)</span></code>:</p>
+<p>Im obigen Beispiel haben wir über eine <em>List</em> iteriert, wir haben also eine Liste als Iterator verwendet. Es gibt aber noch andere „Dinge“, über die wir iterieren können. Angenommen wir wollen den gleichen <em>for loop</em> mit den Zahlen von 0 bis 100 oder 100 bis 1’000 durchführen. Es wäre ganz schön mühsam, alle Zahlen von 0 bis 100 manuell in einer Liste zu erfassen. Zu diesem Zweck können wir die Funktion <code class="docutils literal notranslate"><span class="pre">range</span></code> verwenden. Mit <code class="docutils literal notranslate"><span class="pre">range(3)</span></code> erstellen wir einen Iterator mit den Werten 0, 1 und 2. Mit <code class="docutils literal notranslate"><span class="pre">range(100,1001)</span></code> erhalten wir die Werte von 100 bis 1’000.</p>
+<p>Der gleiche <em>loop</em> wie oben lautet mit <code class="docutils literal notranslate"><span class="pre">range</span></code> folgendermassen:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">platzhalter</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
@@ -483,7 +495,7 @@ Iteration 2
 </div>
 <div class="section" id="der-platzhalter">
 <h3>Der Platzhalter<a class="headerlink" href="#der-platzhalter" title="Link zu dieser Überschrift">¶</a></h3>
-<p>Die Platzhaltervariabel liegt immer zwischen <code class="docutils literal notranslate"><span class="pre">for</span></code> und <code class="docutils literal notranslate"><span class="pre">in</span></code>, den Namen dieser Variabel könnt ihr frei wählen. Ich habe sie im obigen Beispiel <code class="docutils literal notranslate"><span class="pre">platzhalter</span></code> genannt. Speziell an dieser Variabel ist, dass sie während der Dauer des <em>Loops</em> ihren Wert verändert. Mehr dazu in <a class="reference internal" href="03_03_For_Loops.html#forloops-2"><span class="std std-ref">Aufgabe 10: For Loop Basics</span></a>.</p>
+<p>Die Platzhaltervariabel liegt immer zwischen <code class="docutils literal notranslate"><span class="pre">for</span></code> und <code class="docutils literal notranslate"><span class="pre">in</span></code>, den Namen dieser Variabel könnt ihr frei wählen. Ich habe sie im obigen Beispiel <code class="docutils literal notranslate"><span class="pre">platzhalter</span></code> genannt. Speziell an dieser Variabel ist, dass sie während der Dauer des <em>Loops</em> ihren Wert verändert. Mehr dazu in <a class="reference internal" href="03_03_For_Loops.html#forloops-2"><span class="std std-ref">Aufgabe 10: for loop Basics</span></a>.</p>
 </div>
 </div>
 <div class="section" id="ubungen">
@@ -494,8 +506,8 @@ Iteration 2
 </div>
 <div class="section" id="ubung-9-2">
 <span id="for-gruss"></span><h3>Übung 9.2<a class="headerlink" href="#ubung-9-2" title="Link zu dieser Überschrift">¶</a></h3>
-<p>Konstruiere eine Liste bestehend aus 3 Namen und nenne diese Liste <code class="docutils literal notranslate"><span class="pre">namen</span></code>. Erstelle danach einen <em>For Loop</em>, mit welcher jede Person in der Liste gegrüsst wird. Nutze dafür <code class="docutils literal notranslate"><span class="pre">print</span></code>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Der Output könnte etwa so aussehen (ich nutze zur Begrüssung &quot;Ciao&quot;)</span>
+<p>Konstruiere eine Liste bestehend aus 3 Namen und nenne diese Liste <code class="docutils literal notranslate"><span class="pre">namen</span></code>. Erstelle danach einen <em>for loop</em>, mit welcher jede Person in der Liste gegrüsst wird. Nutze dafür <code class="docutils literal notranslate"><span class="pre">print</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Der Output könnte etwa so aussehen</span>
 
 <span class="n">Ciao</span>  <span class="n">Il</span> <span class="n">Buono</span>
 <span class="n">Ciao</span>  <span class="n">Il</span> <span class="n">Brutto</span>
@@ -505,7 +517,7 @@ Iteration 2
 </div>
 <div class="section" id="ubung-9-3">
 <h3>Übung 9.3<a class="headerlink" href="#ubung-9-3" title="Link zu dieser Überschrift">¶</a></h3>
-<p>Kopiere den zweiten <em>For Loop</em> (der mit <code class="docutils literal notranslate"><span class="pre">range</span></code>) und spiele hier mit den Werten herum. Verändere den <em>For Loop</em> so, dass er über die Werte von 0 - 10 iteriert und von -5 bis +5.</p>
+<p>Kopiere den zweiten <em>For Loop</em> (der mit <code class="docutils literal notranslate"><span class="pre">range</span></code>) und spiele hier mit den Werten herum. Verändere den <em>For Loop</em> so, dass er über die Werte von -5 bis +5 iteriert.</p>
 </div>
 <div class="section" id="ubung-9-4">
 <h3>Übung 9.4<a class="headerlink" href="#ubung-9-4" title="Link zu dieser Überschrift">¶</a></h3>
@@ -518,7 +530,7 @@ Iteration 2
 </div>
 <div class="section" id="ubung-9-5">
 <h3>Übung 9.5<a class="headerlink" href="#ubung-9-5" title="Link zu dieser Überschrift">¶</a></h3>
-<p>Bisher haben wir die Platzhaltervariabel immer in unserem <em>Loop</em> wiederverwendet. Das müssen wir aber gar nicht, wir können den <em>For Loop</em> einfach nutzen um etwas x mal zu wiederholen. Erstellen einen <em>For Loop</em> der folgende beiden Sätze 5x wiederholt:</p>
+<p>Bisher haben wir die Platzhaltervariabel immer in unserem <em>Loop</em> wiederverwendet. Das müssen wir aber gar nicht, wir können den <em>for loop</em> einfach nutzen um etwas x mal zu wiederholen. Erstellen einen <em>for loop</em> der folgende beiden Sätze 5x wiederholt:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>Who likes to party?
 We like to party!
 Who likes to party?
@@ -568,7 +580,7 @@ Who likes to party?
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="03_01_Coding_in_GIS_3.html" title="previous page">Einleitung zu diesem Block</a>
-    <a class='right-next' id="next-link" href="03_03_For_Loops.html" title="next page">Aufgabe 10: <em>For Loop</em> Basics</a>
+    <a class='right-next' id="next-link" href="03_03_For_Loops.html" title="next page">Aufgabe 10: <em>for loop</em> Basics</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
@@ -588,7 +600,7 @@ Who likes to party?
     </div>
 
     
-  <script src="_static/js/index.30270b6e4c972e43c488.js"></script>
+  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
 
 
     

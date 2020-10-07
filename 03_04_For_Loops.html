@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aufgabe 11: For Loops Advanced &#8212; Coding in GIS</title>
+    <title>Aufgabe 11: for loops Advanced &#8212; Coding in GIS</title>
     
-  <link rel="stylesheet" href="_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
     
   <link rel="stylesheet"
@@ -25,7 +25,7 @@
     href="_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="_static/sphinx-book-theme.bfb7730f9caf2ec0b46a44615585038c.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.30270b6e4c972e43c488.js">
+  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
 
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -60,7 +60,7 @@
     <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
     <link rel="search" title="Suche" href="search.html" />
     <link rel="next" title="Aufgabe 12: Zeckenstich Simulation" href="03_04_Zeckenstich_Simulation.html" />
-    <link rel="prev" title="Aufgabe 10: For Loop Basics" href="03_03_For_Loops.html" />
+    <link rel="prev" title="Aufgabe 10: for loop Basics" href="03_03_For_Loops.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -205,7 +205,7 @@
   <a class="reference internal" href="03_02_For_Loops.html">
    Aufgabe 9:
    <em>
-    For Loop
+    for loop
    </em>
    Einführung
   </a>
@@ -214,7 +214,7 @@
   <a class="reference internal" href="03_03_For_Loops.html">
    Aufgabe 10:
    <em>
-    For Loop
+    for loop
    </em>
    Basics
   </a>
@@ -223,7 +223,7 @@
   <a class="current reference internal" href="#">
    Aufgabe 11:
    <em>
-    For Loops
+    for loops
    </em>
    Advanced
   </a>
@@ -235,12 +235,17 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="03_05_GIS_in_Python.html">
-   Aufgabe 13: GIS in Python
+   GIS in Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03_06_Raeumliche_Operationen.html">
+   Aufgabe 13: Räumliche Operationen
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="03_06_Spatial_Joins.html">
-   Aufgabe 14: Spatial Joins
+   Aufgabe 14: Spatial Join
   </a>
  </li>
 </ul>
@@ -257,7 +262,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="04_02_Vereinigen.html">
-   Aufgabe 15: Vereinigen aller Einzelteile
+   Aufgabe 15: Grand Finale
   </a>
  </li>
  <li class="toctree-l1">
@@ -273,7 +278,12 @@
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="05_01_Jupyter_Shortcuts.html">
+  <a class="reference internal" href="05_01_GIS_Demo.html">
+   Demo: Geodaten visualisieren
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05_02_Jupyter_Shortcuts.html">
    Basic shortcuts for Jupyter lab
   </a>
  </li>
@@ -333,7 +343,8 @@
 
         <!-- Full screen (wrap in <a> to have style consistency -->
         <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" title="Vollbildmodus"><i
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Vollbildmodus"
+                title="Vollbildmodus"><i
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
@@ -374,7 +385,7 @@
     <a class="reference internal nav-link" href="#verschachtelte-for-loops">
      Verschachtelte
      <em>
-      For Loops
+      for loops
      </em>
     </a>
    </li>
@@ -414,13 +425,17 @@
               <div>
                 
   <div class="section" id="aufgabe-11-for-loops-advanced">
-<span id="forloops-3"></span><h1>Aufgabe 11: <em>For Loops</em> Advanced<a class="headerlink" href="#aufgabe-11-for-loops-advanced" title="Link zu dieser Überschrift">¶</a></h1>
+<span id="forloops-3"></span><h1>Aufgabe 11: <em>for loops</em> Advanced<a class="headerlink" href="#aufgabe-11-for-loops-advanced" title="Link zu dieser Überschrift">¶</a></h1>
 <div class="section" id="theorie">
 <h2>Theorie<a class="headerlink" href="#theorie" title="Link zu dieser Überschrift">¶</a></h2>
-<p>In diesem Kapitel kommen noch zwei Aspekte von <em>For Loops</em>, die als „<em>Advanced</em>“ eingestuft werden können aber in der Praxis sehr nützlich sind. Dabei geht es einerseits um verschachtelte <em>For Loops</em> und andererseits um eine verkürzte Schreibweise von <em>For Loops</em>.</p>
+<p>In diesem Kapitel kommen noch zwei Aspekte von <em>for loops</em>, die als „<em>Advanced</em>“ eingestuft werden können aber in der Praxis sehr nützlich sind. Dabei geht es einerseits um verschachtelte <em>for loops</em> und zum andere um eine verkürzte Schreibweise von <em>for loops</em>.</p>
 <div class="section" id="verschachtelte-for-loops">
-<h3>Verschachtelte <em>For Loops</em><a class="headerlink" href="#verschachtelte-for-loops" title="Link zu dieser Überschrift">¶</a></h3>
-<p>Wir können verschiedene <em>For Loops</em> auch ineinander verschachteln (englisch: <em>nested loops</em>). Das ist vor allem dann nützlich, wenn alle Kombinationen aus zwei Datensätzen miteinander verrechnet werden müssen. Angenommen du willst die drei Mitglieder deiner Band (bestehend aus <em>Il Buono</em>, <em>Il Brutto</em>, <em>Il Cattivo</em>) deinen Eltern vorstellen und auch umgekehrt deine Eltern deiner Band vorstellen. Für so was eignen sich zwei verschachtelte For Loops hervorragend:</p>
+<h3>Verschachtelte <em>for loops</em><a class="headerlink" href="#verschachtelte-for-loops" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Wir können verschiedene <em>for loops</em> auch ineinander verschachteln (englisch: <em>nested loops</em>). Das ist vor allem dann nützlich, wenn alle Kombinationen aus zwei Datensätzen miteinander verrechnet werden müssen. Angenommen du willst die drei Mitglieder deiner Band (bestehend aus <em>Il Buono</em>, <em>Il Brutto</em>, <em>Il Cattivo</em>) deinen Eltern vorstellen und auch umgekehrt deine Eltern deiner Band vorstellen. Für so was eignen sich zwei verschachtelte <em>for Loops</em> hervorragend:</p>
+<div class="dropdown admonition tip">
+<p class="admonition-title">Tipp</p>
+<p>Als Platzhaltervariabel nutze ich wenn immer möglich das Singulär und für den Iterator das Plural von dem Objekt, über das ich iteriere. <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">bandmitglied</span> <span class="pre">in</span> <span class="pre">band</span></code>, <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">vogel</span> <span class="pre">in</span> <span class="pre">vögel</span></code> usw, dies hilft mir den Überblick im <em>loop</em> zu bewahren.</p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eltern</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Papa&quot;</span><span class="p">,</span> <span class="s2">&quot;Mama&quot;</span><span class="p">]</span>
@@ -460,7 +475,7 @@ Il Cattivo das ist Mama
 </div>
 <div class="section" id="verkurzte-schreibweise">
 <h3>Verkürzte Schreibweise<a class="headerlink" href="#verkurzte-schreibweise" title="Link zu dieser Überschrift">¶</a></h3>
-<p>Es ist äusserst häufig der Fall, dass wir den Output aus einem Loop in einer Liste abspeichern wollen. Wie das geht haben wir ja bereits in <a class="reference internal" href="03_03_For_Loops.html#forloops-2"><span class="std std-ref">Aufgabe 10: For Loop Basics</span></a> gelernt:</p>
+<p>Es ist äusserst häufig der Fall, dass wir den Output aus einem Loop in einer Liste abspeichern wollen. Wie das geht haben wir ja bereits in <a class="reference internal" href="03_03_For_Loops.html#forloops-2"><span class="std std-ref">Aufgabe 10: for loop Basics</span></a> gelernt:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rollen</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;bitch&quot;</span><span class="p">,</span><span class="s2">&quot;lover&quot;</span><span class="p">,</span><span class="s2">&quot;child&quot;</span><span class="p">,</span><span class="s2">&quot;mother&quot;</span><span class="p">,</span><span class="s2">&quot;sinner&quot;</span><span class="p">,</span><span class="s2">&quot;saint&quot;</span><span class="p">]</span>
@@ -532,7 +547,7 @@ Il Cattivo das ist Mama
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="03_03_For_Loops.html" title="previous page">Aufgabe 10: <em>For Loop</em> Basics</a>
+    <a class='left-prev' id="prev-link" href="03_03_For_Loops.html" title="previous page">Aufgabe 10: <em>for loop</em> Basics</a>
     <a class='right-next' id="next-link" href="03_04_Zeckenstich_Simulation.html" title="next page">Aufgabe 12: Zeckenstich Simulation</a>
 
     </div>
@@ -553,7 +568,7 @@ Il Cattivo das ist Mama
     </div>
 
     
-  <script src="_static/js/index.30270b6e4c972e43c488.js"></script>
+  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
 
 
     

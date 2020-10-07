@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aufgabe 15: Vereinigen aller Einzelteile &#8212; Coding in GIS</title>
+    <title>Aufgabe 15: Grand Finale &#8212; Coding in GIS</title>
     
-  <link rel="stylesheet" href="_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
     
   <link rel="stylesheet"
@@ -25,7 +25,7 @@
     href="_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="_static/sphinx-book-theme.bfb7730f9caf2ec0b46a44615585038c.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.30270b6e4c972e43c488.js">
+  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
 
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -205,7 +205,7 @@
   <a class="reference internal" href="03_02_For_Loops.html">
    Aufgabe 9:
    <em>
-    For Loop
+    for loop
    </em>
    Einführung
   </a>
@@ -214,7 +214,7 @@
   <a class="reference internal" href="03_03_For_Loops.html">
    Aufgabe 10:
    <em>
-    For Loop
+    for loop
    </em>
    Basics
   </a>
@@ -223,7 +223,7 @@
   <a class="reference internal" href="03_04_For_Loops.html">
    Aufgabe 11:
    <em>
-    For Loops
+    for loops
    </em>
    Advanced
   </a>
@@ -235,12 +235,17 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="03_05_GIS_in_Python.html">
-   Aufgabe 13: GIS in Python
+   GIS in Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03_06_Raeumliche_Operationen.html">
+   Aufgabe 13: Räumliche Operationen
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="03_06_Spatial_Joins.html">
-   Aufgabe 14: Spatial Joins
+   Aufgabe 14: Spatial Join
   </a>
  </li>
 </ul>
@@ -257,7 +262,7 @@
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Aufgabe 15: Vereinigen aller Einzelteile
+   Aufgabe 15: Grand Finale
   </a>
  </li>
  <li class="toctree-l1">
@@ -273,7 +278,12 @@
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="05_01_Jupyter_Shortcuts.html">
+  <a class="reference internal" href="05_01_GIS_Demo.html">
+   Demo: Geodaten visualisieren
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05_02_Jupyter_Shortcuts.html">
    Basic shortcuts for Jupyter lab
   </a>
  </li>
@@ -333,7 +343,8 @@
 
         <!-- Full screen (wrap in <a> to have style consistency -->
         <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" title="Vollbildmodus"><i
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Vollbildmodus"
+                title="Vollbildmodus"><i
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
@@ -423,8 +434,8 @@
         
               <div>
                 
-  <div class="section" id="aufgabe-15-vereinigen-aller-einzelteile">
-<span id="chap-waldanteil"></span><h1>Aufgabe 15: Vereinigen aller Einzelteile<a class="headerlink" href="#aufgabe-15-vereinigen-aller-einzelteile" title="Link zu dieser Überschrift">¶</a></h1>
+  <div class="section" id="aufgabe-15-grand-finale">
+<span id="chap-waldanteil"></span><h1>Aufgabe 15: Grand Finale<a class="headerlink" href="#aufgabe-15-grand-finale" title="Link zu dieser Überschrift">¶</a></h1>
 <div class="section" id="theorie">
 <h2>Theorie<a class="headerlink" href="#theorie" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Um an diesen Punkt zu kommen habt ihr euch diverse Werkzeuge aneignen müssen (<em>Functions</em>, <em>For Loops</em>, <em>GIS</em>) und habt dazu Übungen gelöst. Die nachstehenden Code Blöcke nutzen Elemente aus diesen Übungen um auf den gleichen Stand zu kommen, mit der ihr im Themenblock „Datenqualität und Unsicherheiten“ in die Übung gestartet seid. Ihr hattet damals (a) Simulierte Zeckenstich-Daten und (b) einen Layer Waldinformation im Projektgebiet.</p>
@@ -501,11 +512,11 @@
 </ol>
 <div class="section" id="ubung-15-1">
 <span id="ex-14-1"></span><h3>Übung 15.1<a class="headerlink" href="#ubung-15-1" title="Link zu dieser Überschrift">¶</a></h3>
-<p>Konvertiere <code class="docutils literal notranslate"><span class="pre">monte_carlo_df</span></code> in eine <em>GeoDataFrame</em> und speichere den Output als <code class="docutils literal notranslate"><span class="pre">monte_carlo_gpd</span></code>. Setze dabei auch das Korrekte Koordinatensystem. Schaue dir nochmal <a class="reference internal" href="03_05_GIS_in_Python.html#chap-pythongis"><span class="std std-ref">Aufgabe 13: GIS in Python</span></a> an wenn du dir unsicher bist, wie das geht.</p>
+<p>Konvertiere <code class="docutils literal notranslate"><span class="pre">monte_carlo_df</span></code> in eine <em>GeoDataFrame</em> und speichere den Output als <code class="docutils literal notranslate"><span class="pre">monte_carlo_gpd</span></code>. Setze dabei auch das Korrekte Koordinatensystem. Schaue dir nochmal <a class="reference internal" href="03_05_GIS_in_Python.html#chap-pythongis"><span class="std std-ref">GIS in Python</span></a> an wenn du dir unsicher bist, wie das geht.</p>
 </div>
 <div class="section" id="ubung-15-2">
 <span id="ex-14-3"></span><h3>Übung 15.2<a class="headerlink" href="#ubung-15-2" title="Link zu dieser Überschrift">¶</a></h3>
-<p>Ermittle für jeden simulierten Punkt, ob er im Wald ist oder nicht und speichere den Output als <code class="docutils literal notranslate"><span class="pre">monte_carlo_join</span></code>. Schaue dir nochmal <a class="reference internal" href="03_06_Spatial_Joins.html#chap-spatialjoin"><span class="std std-ref">Aufgabe 14: Spatial Joins</span></a> an wenn du dir unsicher bist, wie das geht. Schau dir anschliessend <code class="docutils literal notranslate"><span class="pre">monte_carlo_join</span></code> an. Sortiere die <em>GeoDataFrame</em> nach „Run“ (<code class="docutils literal notranslate"><span class="pre">monte_carlo_join.sort_values(&quot;Run&quot;)</span></code>) um anschliessend nach „ID“ und versuche so, die Daten zu verstehen.</p>
+<p>Ermittle für jeden simulierten Punkt, ob er im Wald ist oder nicht und speichere den Output als <code class="docutils literal notranslate"><span class="pre">monte_carlo_join</span></code>. Schaue dir nochmal <a class="reference internal" href="03_06_Spatial_Joins.html#chap-spatialjoin"><span class="std std-ref">Aufgabe 14: Spatial Join</span></a> an wenn du dir unsicher bist, wie das geht. Schau dir anschliessend <code class="docutils literal notranslate"><span class="pre">monte_carlo_join</span></code> an. Sortiere die <em>GeoDataFrame</em> nach „Run“ (<code class="docutils literal notranslate"><span class="pre">monte_carlo_join.sort_values(&quot;Run&quot;)</span></code>) um anschliessend nach „ID“ und versuche so, einen Überblick über die Daten zu gewinnen.</p>
 </div>
 <div class="section" id="ubung-15-3">
 <span id="ex-groupby"></span><h3>Übung 15.3<a class="headerlink" href="#ubung-15-3" title="Link zu dieser Überschrift">¶</a></h3>
@@ -537,12 +548,12 @@ dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Run  Wald_text
-0    ja            3
-     nein          7
-1    ja            3
-     nein          7
-2    ja            3
-     nein          7
+0    ja            5
+     nein          5
+1    ja            6
+     nein          4
+2    ja            5
+     nein          5
 3    ja            6
      nein          4
 4    ja           10
@@ -592,18 +603,18 @@ dtype: int64
   <tbody>
     <tr>
       <th>0</th>
-      <td>3.0</td>
-      <td>7.0</td>
+      <td>5.0</td>
+      <td>5.0</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>3.0</td>
-      <td>7.0</td>
+      <td>6.0</td>
+      <td>4.0</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>3.0</td>
-      <td>7.0</td>
+      <td>5.0</td>
+      <td>5.0</td>
     </tr>
     <tr>
       <th>3</th>
@@ -662,18 +673,18 @@ dtype: int64
   <tbody>
     <tr>
       <th>0</th>
-      <td>3</td>
-      <td>7</td>
+      <td>5</td>
+      <td>5</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>3</td>
-      <td>7</td>
+      <td>6</td>
+      <td>4</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>3</td>
-      <td>7</td>
+      <td>5</td>
+      <td>5</td>
     </tr>
     <tr>
       <th>3</th>
@@ -738,21 +749,21 @@ dtype: int64
   <tbody>
     <tr>
       <th>0</th>
-      <td>3</td>
-      <td>7</td>
-      <td>0.3</td>
+      <td>5</td>
+      <td>5</td>
+      <td>0.5</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>3</td>
-      <td>7</td>
-      <td>0.3</td>
+      <td>6</td>
+      <td>4</td>
+      <td>0.6</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>3</td>
-      <td>7</td>
-      <td>0.3</td>
+      <td>5</td>
+      <td>5</td>
+      <td>0.5</td>
     </tr>
     <tr>
       <th>3</th>
@@ -827,7 +838,7 @@ dtype: int64
     </div>
 
     
-  <script src="_static/js/index.30270b6e4c972e43c488.js"></script>
+  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
 
 
     

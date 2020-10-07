@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aufgabe 14: Spatial Joins &#8212; Coding in GIS</title>
+    <title>Aufgabe 14: Spatial Join &#8212; Coding in GIS</title>
     
-  <link rel="stylesheet" href="_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
     
   <link rel="stylesheet"
@@ -25,7 +25,7 @@
     href="_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="_static/sphinx-book-theme.bfb7730f9caf2ec0b46a44615585038c.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.2d2078699c18a0efb88233928e1cf6ed.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.30270b6e4c972e43c488.js">
+  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
 
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -60,7 +60,7 @@
     <link rel="index" title="Stichwortverzeichnis" href="genindex.html" />
     <link rel="search" title="Suche" href="search.html" />
     <link rel="next" title="Einleitung" href="04_01_Leistungsnachweis.html" />
-    <link rel="prev" title="Aufgabe 13: GIS in Python" href="03_05_GIS_in_Python.html" />
+    <link rel="prev" title="Aufgabe 13: Räumliche Operationen" href="03_06_Raeumliche_Operationen.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -205,7 +205,7 @@
   <a class="reference internal" href="03_02_For_Loops.html">
    Aufgabe 9:
    <em>
-    For Loop
+    for loop
    </em>
    Einführung
   </a>
@@ -214,7 +214,7 @@
   <a class="reference internal" href="03_03_For_Loops.html">
    Aufgabe 10:
    <em>
-    For Loop
+    for loop
    </em>
    Basics
   </a>
@@ -223,7 +223,7 @@
   <a class="reference internal" href="03_04_For_Loops.html">
    Aufgabe 11:
    <em>
-    For Loops
+    for loops
    </em>
    Advanced
   </a>
@@ -235,12 +235,17 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="03_05_GIS_in_Python.html">
-   Aufgabe 13: GIS in Python
+   GIS in Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03_06_Raeumliche_Operationen.html">
+   Aufgabe 13: Räumliche Operationen
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Aufgabe 14: Spatial Joins
+   Aufgabe 14: Spatial Join
   </a>
  </li>
 </ul>
@@ -257,7 +262,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="04_02_Vereinigen.html">
-   Aufgabe 15: Vereinigen aller Einzelteile
+   Aufgabe 15: Grand Finale
   </a>
  </li>
  <li class="toctree-l1">
@@ -273,7 +278,12 @@
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="05_01_Jupyter_Shortcuts.html">
+  <a class="reference internal" href="05_01_GIS_Demo.html">
+   Demo: Geodaten visualisieren
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05_02_Jupyter_Shortcuts.html">
    Basic shortcuts for Jupyter lab
   </a>
  </li>
@@ -333,7 +343,8 @@
 
         <!-- Full screen (wrap in <a> to have style consistency -->
         <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" title="Vollbildmodus"><i
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Vollbildmodus"
+                title="Vollbildmodus"><i
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
@@ -369,6 +380,17 @@
   <a class="reference internal nav-link" href="#theorie">
    Theorie
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#wie-funktioniert-ein-spatial-join">
+     Wie funktioniert ein
+     <em>
+      Spatial Join
+     </em>
+     ?
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#ubungen">
@@ -398,36 +420,39 @@
         
               <div>
                 
-  <div class="section" id="aufgabe-14-spatial-joins">
-<span id="chap-spatialjoin"></span><h1>Aufgabe 14: Spatial Joins<a class="headerlink" href="#aufgabe-14-spatial-joins" title="Link zu dieser Überschrift">¶</a></h1>
+  <div class="section" id="aufgabe-14-spatial-join">
+<span id="chap-spatialjoin"></span><h1>Aufgabe 14: Spatial Join<a class="headerlink" href="#aufgabe-14-spatial-join" title="Link zu dieser Überschrift">¶</a></h1>
 <div class="section" id="theorie">
 <h2>Theorie<a class="headerlink" href="#theorie" title="Link zu dieser Überschrift">¶</a></h2>
-<p>In <a class="reference internal" href="03_05_GIS_in_Python.html#chap-pythongis"><span class="std std-ref">Aufgabe 13: GIS in Python</span></a> habt ihr euch mit den GIS-Funktionalitäten von <code class="docutils literal notranslate"><span class="pre">geopandas</span></code> vertraut gemacht. Eine ganz zentrale Funktion in GIS sind die sogenannten „Spatial Joins“. Dabei werden Attribute von einem Geodatensatz auf einen anderen Geodatensatz aufgrund einer räumlichen Beziehung der beiden Datensätze übertragen. Konkret auf unsere Zeckenstiche bedeutet dies: Jedem Zeckenstich sollte die Eigenschaft „Wald: ja“ / „Wald: nein“ aus <code class="docutils literal notranslate"><span class="pre">wald</span></code> zugewiesen werden. Am einfachsten lässt sich dies in einer Darstellung erklären:</p>
-<div class="figure align-default" id="spatialjoin">
-<img alt="_images/spatialjoin.jpg" src="_images/spatialjoin.jpg" />
-<p class="caption"><span class="caption-number">Abb. 4 </span><span class="caption-text">„Spatial Join“ zwischen <code class="docutils literal notranslate"><span class="pre">zeckenstiche</span></code> und <code class="docutils literal notranslate"><span class="pre">wald</span></code>. In diesem Spatial Join wurde die Geometrie von <code class="docutils literal notranslate"><span class="pre">zeckenstiche</span></code> übernommen, das heisst das Resultat des Joins ist ein Punkt-Layer.</span><a class="headerlink" href="#spatialjoin" title="Link zu diesem Bild">¶</a></p>
-</div>
-<p>Angenommen ihr habt folgende Ausgangslage:</p>
+<p>In dieser Aufgabe wollen wir für jeden Zeckenstich ermitteln, ob er sich im Wald befindet oder nicht. Den Wald Layer kennt ihr bereits aus dem Block „Datenqualität und Unsicherheit“ und wir haben ihn in <a class="reference internal" href="03_05_GIS_in_Python.html#chap-pythongis-formate"><span class="std std-ref">Geodatenformate</span></a> kurz angeschaut. Nutzen wir hier nochmal die Gelegenheit, um den Wald und die Zeckenstiche als Geodaten einzulesen und in einer grossem Plot zu visualisieren.</p>
+<p>Wie ihr schon in vorherigen Plots von mir bemerkt hat, nutze ich manchmal <code class="docutils literal notranslate"><span class="pre">pyplot</span></code> aus <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> (importiert mit alias <code class="docutils literal notranslate"><span class="pre">plt</span></code>) wenn ich etwas mehr flexibiltät haben möchte in meinen plots. Wir werden diese Visualisierungtechnik nicht weiter in diesem Kurs, kopiert einfach den entsprechenden Code in euer Notebook.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="n">zeckenstiche</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;zeckenstiche.csv&quot;</span><span class="p">)</span>
-
-<span class="n">zeckenstiche_gpd</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span><span class="n">zeckenstiche</span><span class="p">,</span>
-                                    <span class="n">geometry</span><span class="o">=</span><span class="n">gpd</span><span class="o">.</span><span class="n">points_from_xy</span><span class="p">(</span><span class="n">zeckenstiche</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">],</span> <span class="n">zeckenstiche</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">]),</span>
-                                    <span class="n">crs</span> <span class="o">=</span> <span class="mi">2056</span><span class="p">)</span> 
-
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<span class="n">zeckenstiche_gpd</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s2">&quot;zeckenstiche.gpkg&quot;</span><span class="p">)</span>
 <span class="n">wald</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s2">&quot;wald.gpkg&quot;</span><span class="p">)</span>
+
+<span class="c1"># Subplots mit 1 Zeile und 1 Spalte</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
+<span class="n">wald</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Lightgray&quot;</span><span class="p">,</span><span class="s2">&quot;Green&quot;</span><span class="p">],</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">ax</span><span class="p">)</span>
+<span class="n">zeckenstiche_gpd</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;Red&quot;</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">ax</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.7.9/x64/lib/python3.7/site-packages/geopandas/_compat.py:88: UserWarning: The Shapely GEOS version (3.8.0-CAPI-1.13.1 ) is incompatible with the GEOS version PyGEOS was compiled with (3.8.1-CAPI-1.13.3). Conversions between both will be slow.
-  shapely_geos_version, geos_capi_version_string
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
 </pre></div>
 </div>
+<img alt="_images/03_06_Spatial_Joins_1_1.png" src="_images/03_06_Spatial_Joins_1_1.png" />
 </div>
+</div>
+<div class="section" id="wie-funktioniert-ein-spatial-join">
+<h3>Wie funktioniert ein <em>Spatial Join</em>?<a class="headerlink" href="#wie-funktioniert-ein-spatial-join" title="Link zu dieser Überschrift">¶</a></h3>
+<p>In <a class="reference internal" href="03_05_GIS_in_Python.html#chap-pythongis"><span class="std std-ref">GIS in Python</span></a> habt ihr euch mit den GIS-Funktionalitäten von <code class="docutils literal notranslate"><span class="pre">geopandas</span></code> vertraut gemacht. Eine ganz zentrale Funktion in GIS sind die sogenannten „Spatial Joins“. Dabei werden Attribute von einem Geodatensatz auf einen anderen Geodatensatz aufgrund einer räumlichen Beziehung der beiden Datensätze übertragen. Konkret auf unsere Zeckenstiche bedeutet dies: Jedem Zeckenstich sollte die Eigenschaft „Wald: ja“ / „Wald: nein“ aus <code class="docutils literal notranslate"><span class="pre">wald</span></code> zugewiesen werden. Am einfachsten lässt sich dies in einer Darstellung erklären:</p>
+<div class="figure align-default" id="spatialjoin">
+<img alt="_images/spatialjoin.jpg" src="_images/spatialjoin.jpg" />
+<p class="caption"><span class="caption-number">Abb. 4 </span><span class="caption-text">„Spatial Join“ zwischen <code class="docutils literal notranslate"><span class="pre">zeckenstiche</span></code> und <code class="docutils literal notranslate"><span class="pre">wald</span></code>. In diesem Spatial Join wurde die Geometrie von <code class="docutils literal notranslate"><span class="pre">zeckenstiche</span></code> übernommen, das heisst das Resultat des Joins ist ein Punkt-Layer.</span><a class="headerlink" href="#spatialjoin" title="Link zu diesem Bild">¶</a></p>
 </div>
 <p>In Python wird ein <em>Spatial Join</em> zwischen <code class="docutils literal notranslate"><span class="pre">zeckenstiche</span></code> und <code class="docutils literal notranslate"><span class="pre">wald</span></code> wie folgt durchgeführt (wichtig ist dabei auch die Reihenfolge der Argumente: <code class="docutils literal notranslate"><span class="pre">left_df</span></code> bestimmt den Geometrietyp des Outputs):</p>
 <div class="cell docutils container">
@@ -581,6 +606,7 @@
 </div></div></div>
 </div>
 </div>
+</div>
 <div class="section" id="ubungen">
 <h2>Übungen<a class="headerlink" href="#ubungen" title="Link zu dieser Überschrift">¶</a></h2>
 <div class="section" id="ubung-14-1">
@@ -591,6 +617,10 @@
 <div class="section" id="ubung-14-2">
 <span id="ex-spatialjoin"></span><h3>Übung 14.2<a class="headerlink" href="#ubung-14-2" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Führe einen SpatialJoin zwischen <code class="docutils literal notranslate"><span class="pre">wald</span></code> und <code class="docutils literal notranslate"><span class="pre">zeckenstiche</span></code> durch. Vertausche die Reihenfolge (<code class="docutils literal notranslate"><span class="pre">left_df</span></code>, <code class="docutils literal notranslate"><span class="pre">right_df</span></code>) und schaue dir den Output an. Was ist hier passiert?</p>
+<div class="attention admonition">
+<p class="admonition-title">Wichtig!</p>
+<p>Melde dich bei den Betreuern wenn der <em>SpatialJoin</em> bei dir nicht funktioniert und du eine Fehlermeldung bekommst. In diesem Fall kann es sein, dass du auf dem <a class="reference external" href="https://jupyterhub01.zhaw.ch">Server</a> arbeiten musst (siehe {ref}(chap-intro-cig1)).</p>
+</div>
 </div>
 </div>
 </div>
@@ -623,7 +653,7 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="03_05_GIS_in_Python.html" title="previous page">Aufgabe 13: GIS in Python</a>
+    <a class='left-prev' id="prev-link" href="03_06_Raeumliche_Operationen.html" title="previous page">Aufgabe 13: Räumliche Operationen</a>
     <a class='right-next' id="next-link" href="04_01_Leistungsnachweis.html" title="next page">Einleitung</a>
 
     </div>
@@ -644,7 +674,7 @@
     </div>
 
     
-  <script src="_static/js/index.30270b6e4c972e43c488.js"></script>
+  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
 
 
     
